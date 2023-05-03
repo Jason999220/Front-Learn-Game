@@ -12,15 +12,18 @@
 input[type="text"] {
   font-size: 1.5rem;
   background: inherit;
+  width: 70%; /* 先寫死，後續改成依文字而改變長度 */
 }
 .container {
-  height: 100vh; /* 高度符合顯示器高度 */
+  height: calc(100vh - 45px); /* 高度符合顯示器高度 */
   background: linear-gradient(45deg, peru, lightblue); /* 使背景漸層 */
   opacity: 0.7; /* 顯示度 */
   display: flex;
 }
 .courses {
+  width: 100%;
   padding-top: 5rem;
+  margin: 0 auto;
 }
 .course-box {
   margin: 0 auto;
@@ -40,13 +43,38 @@ input[type="text"] {
   font-size: 4.2rem;
   box-shadow: 0 0 10px 10px rgb(84, 49, 14);
 }
-
 nav {
-  width: 40%;
+  width: 100%;
+  height: 45px;
+  background: gray;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+aside {
+  width: 65%;
+  height: 100%;
   border: 1px solid #000;
   display: flex;
   flex-direction: column;
   background-color: lightsalmon;
+  overflow-y: scroll;
 }
 .course {
   cursor: pointer;
@@ -56,7 +84,6 @@ nav {
 .right {
   width: 60%;
   border: 1px solid #000;
-  height: 100vh;
 }
 .result {
   background: peru;
@@ -68,6 +95,9 @@ nav {
 .content {
   background: blue;
   height: 50%;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 0 1rem 1.3rem;
 }
 #border:checked ~ result {
   background: #000;

@@ -8,26 +8,86 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
+    <nav>
+      <div class="logo">LOGO</div>
+      <div class="seacher"><input type="text" />SEACHER</div>
+      <a class="back" href="../index.html">BACk</a>
+    </nav>
     <div class="container">
       <!-- 選項區 -->
-      <nav>
+      <aside>
+        <!-- height -->
+        <p class="course">
+          <input type="radio" name="option" id="height" />
+          <label for="height">height:</label>
+          <input type="text" value="150px" id="input-height" />
+        </p>
+        <!-- width -->
+        <p class="course">
+          <input type="radio" name="option" id="width" />
+          <label for="width">width:</label>
+          <input type="text" value="150px" id="input-width" />
+        </p>
+        <!-- border -->
         <p class="course">
           <input type="radio" name="option" id="border" />
           <label for="border">border:</label>
-          <input type="text" value="1px solid #000" id="input" />
+          <input type="text" value="1px solid #000" id="input-border" />
         </p>
+        <!-- box-shadow -->
         <p class="course">
           <input type="radio" name="option" id="box-shadow" />
-          <label for="box-shadow">box-shadow: 0 0 10px 10px rgb(0, 0, 0)</label>
+          <label for="box-shadow">box-shadow:</label>
+          <input
+            type="text"
+            value="0px 0px 0px 0px rgba(0, 0, 0, 1.0) "
+            id="input-boxShadow"
+          />
         </p>
-      </nav>
+        <!-- background -->
+        <p class="course">
+          <input type="radio" name="option" id="background" />
+          <label for="background">background:</label>
+          <input type="text" value="block" id="input-background" />
+        </p>
+        <!-- padding -->
+        <p class="course">
+          <input type="radio" name="option" id="padding" />
+          <label for="padding">padding:</label>
+          <input type="text" value="1px solid #000" id="input-padding" />
+        </p>
+        <!-- margin -->
+        <p class="course">
+          <input type="radio" name="option" id="margin" />
+          <label for="margin">margin:</label>
+          <input type="text" value="1px solid #000" id="input-margin" />
+        </p>
+        <!-- outline -->
+        <p class="course">
+          <input type="radio" name="option" id="outline" />
+          <label for="outline">outline:</label>
+          <input type="text" value="1px solid #000" id="input-outline" />
+        </p>
+        <!-- flex -->
+        <p class="course">
+          <input type="radio" name="option" id="flex" />
+          <label for="flex">flex:</label>
+          <input type="text" value="1px solid #000" id="input-flex" />
+        </p>
+        <!-- gird -->
+        <p class="course">
+          <input type="radio" name="option" id="gird" />
+          <label for="gird">gird:</label>
+          <input type="text" value="1px solid #000" id="input-gird" />
+        </p>
+      </aside>
       <div class="right">
         <!-- 結果區 -->
         <div class="result">
           <div id="result"></div>
         </div>
         <!-- 解釋區 -->
-        <div class="content"></div>
+        <div class="content" id="content"></div>
       </div>
     </div>
     <script src="../inden.js"></script>
