@@ -9,24 +9,36 @@
   </head>
   <body>
     <nav>
-      <div class="logo">LOGO</div>
-      <div class="seacher"><input type="text" />SEACHER</div>
-      <a class="back" href="../index.html">BACk</a>
+      <a class="back" href="../index.html">BACK</a>
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Find code" />
+        <button id="search-btn">SEARCH</button>
+      </div>
+      <!-- 各大選項標題 -->
+      <div class="title-box">
+        <a class="title" href="../components/position.html">位置</a>
+        <a class="title" href="../components/animation.html">特效</a>
+        <a class="title" href="../components/typesetting.html">排版</a>
+      </div>
     </nav>
     <div class="container">
       <!-- 選項區 -->
       <aside>
-        <!-- height -->
+        <!-- cursor -->
         <p class="course">
-          <input type="radio" name="option" id="height" />
-          <label for="height">height:</label>
-          <input type="text" value="150px" id="input-height" />
+          <input type="radio" name="option" id="cursor" />
+          <label for="cursor">cursor:</label>
+          <input type="text" value="pointer" id="input-cursor" />
         </p>
         <!-- width -->
         <p class="course">
-          <input type="radio" name="option" id="width" />
-          <label for="width">width:</label>
-          <input type="text" value="150px" id="input-width" />
+          <input type="radio" name="option" id="transform" />
+          <label for="transform">transform:</label>
+          <input
+            type="text"
+            value="translate(-50%, -10%)"
+            id="input-transform"
+          />
         </p>
         <!-- border -->
         <p class="course">
@@ -54,13 +66,13 @@
         <p class="course">
           <input type="radio" name="option" id="padding" />
           <label for="padding">padding:</label>
-          <input type="text" value="1px solid #000" id="input-padding" />
+          <input type="text" value="0px" id="input-padding" />
         </p>
         <!-- margin -->
         <p class="course">
           <input type="radio" name="option" id="margin" />
           <label for="margin">margin:</label>
-          <input type="text" value="1px solid #000" id="input-margin" />
+          <input type="text" value="0px" id="input-margin" />
         </p>
         <!-- outline -->
         <p class="course">
@@ -68,28 +80,20 @@
           <label for="outline">outline:</label>
           <input type="text" value="1px solid #000" id="input-outline" />
         </p>
-        <!-- flex -->
-        <p class="course">
-          <input type="radio" name="option" id="flex" />
-          <label for="flex">flex:</label>
-          <input type="text" value="1px solid #000" id="input-flex" />
-        </p>
-        <!-- gird -->
-        <p class="course">
-          <input type="radio" name="option" id="gird" />
-          <label for="gird">gird:</label>
-          <input type="text" value="1px solid #000" id="input-gird" />
-        </p>
       </aside>
       <div class="right">
         <!-- 結果區 -->
         <div class="result">
+          <div id="outside"><div id="inner"></div></div>
+          <!-- 用在position -->
           <div id="result"></div>
+          <!-- 通用 -->
         </div>
         <!-- 解釋區 -->
         <div class="content" id="content"></div>
       </div>
     </div>
+    <script src="../common.js"></script>
     <script src="../inden.js"></script>
   </body>
 </html>

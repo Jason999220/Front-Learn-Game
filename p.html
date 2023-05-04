@@ -14,17 +14,35 @@
     <meta name="author" content="Jason" />
     <!-- 搜索作者名稱 -->
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        height: 2000px;
+      }
+      .box {
+        width: 500px;
+        height: 500px;
+        bottom: 0;
+        right: 0;
+        background: rgb(0, 255, 72);
+      }
+      .box1 {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+      .box2 {
+        position: sticky;
+        width: 100px;
+        height: 100px;
+        top: 100px;
+        background: rgb(81, 0, 255);
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <div class="courses">
-        <a class="course-box" href="./pages/html.html">HTML</a>
-        <a class="course-box" href="./pages/css.html">CSS</a>
-        <a class="course-box" href="./pages/javascript.html">JavaScript</a>
-      </div>
+    <div class="box">
+      <div class="box1"><div class="box2"></div></div>
     </div>
   </body>
 </html>
-
-!
