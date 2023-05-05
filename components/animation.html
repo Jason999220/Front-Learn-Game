@@ -19,43 +19,92 @@
         <a class="title" href="../components/position.html">位置</a>
         <a class="title" href="../components/animation.html">特效</a>
         <a class="title" href="../components/typesetting.html">排版</a>
+        <a class="title" href="../components/unit.html">單位</a>
       </div>
     </nav>
     <div class="container">
       <!-- 選項區 -->
       <aside>
+        <!-- transform -->
+        <p class="course">
+          <input type="radio" name="option" id="transform-translate" />
+          <label for="transform-translate">transform:</label>
+          <input
+            type="text"
+            value="translate(0%, 0%)"
+            placeholder="請輸入參數"
+            id="input-transform-translate"
+          />
+        </p>
+        <p class="course">
+          <input type="radio" name="option" id="transform-scale" />
+          <label for="transform-scale">transform:</label>
+          <input
+            type="text"
+            value="scale(1,1)"
+            placeholder="請輸入參數"
+            id="input-transform-scale"
+          />
+        </p>
+        <p class="course">
+          <input type="radio" name="option" id="transform-rotate" />
+          <label for="transform-rotate">transform:</label>
+          <input
+            type="text"
+            value="rotate(0deg)"
+            placeholder="請輸入參數"
+            id="input-transform-rotate"
+          />
+        </p>
+        <p class="course">
+          <input type="radio" name="option" id="transform-rotate3d" />
+          <label for="transform-rotate3d">transform:</label>
+          <input
+            type="text"
+            value="rotate3d(1, 1, 0, 60deg)"
+            placeholder="請輸入參數"
+            id="input-transform-rotate3d"
+          />
+        </p>
         <!-- transition -->
         <p class="course">
           <input type="radio" name="option" id="transition" />
           <label for="transition">transition:</label>
-          <input type="text" value="1px " id="input-transition" />
-        </p>
-        <!-- transform -->
-        <p class="course">
-          <input type="radio" name="option" id="transform" />
-          <label for="transform">transform:</label>
           <input
             type="text"
-            value="translate(-50%, -10%)"
-            id="input-transform"
+            value="width 2s ease-in 0.5s"
+            placeholder="transition-property | transition-duration | transition-timing-function | transition-delay;"
+            id="input-transition"
           />
         </p>
         <!-- animation -->
         <p class="course">
           <input type="radio" name="option" id="animation" />
           <label for="animation">animation:</label>
-          <input type="text" value="0px " id="input-animation" />
+          <input type="text" value="name 2s infinite" id="input-animation" />
+          <!-- 放 @keyframe -->
+          <div for="animation" id="keyframes-box">
+            <!-- 標題 -->
+            <div id="keyframesNameDiv"> <input type="text" value="name" id="keyframesName" placeholder="請輸入動畫名稱"></input></div>
+            <!-- 執行碼 -->
+            <div id="keyframes-code">
+              <input value="{from{left:0px} to{left:200px}}" type="text">
+            </div>
+          </div>
         </p>
       </aside>
       <div class="right">
         <!-- 結果區 -->
         <div class="result">
-          <div id="result"></div>
+          <div id="result">
+            <div id="inner2"><div class="rotateBall"></div></div>
+          </div>
         </div>
         <!-- 解釋區 -->
         <div class="content" id="content"></div>
       </div>
     </div>
     <script src="../common.js"></script>
+    <script src="./animation.js"></script>
   </body>
 </html>
