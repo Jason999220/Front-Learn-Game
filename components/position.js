@@ -17,48 +17,38 @@ const positionAbsolute = document.getElementById("position-absolute");
 const positionFixed = document.getElementById("position-fixed");
 const positionSticky = document.getElementById("position-sticky");
 
+// position reset
+const positionReset = () => {
+  inner1.style = "";
+};
+
 // position methods
 positionStatic.addEventListener("click", () => {
-  inner1.style.top = "0px";
-  inner1.style.right = "0px";
-  inner1.style.bottom = "0px";
-  inner1.style.left = "0px";
+  positionReset();
   inner1.style.position = "static";
   content.innerHTML =
     "<p>position:static是預設值<br>top、right、bottom、left均不會有效果</p>";
 });
 positionRelative.addEventListener("click", () => {
-  inner1.style.top = "0px";
-  inner1.style.right = "0px";
-  inner1.style.bottom = "0px";
-  inner1.style.left = "0px";
+  positionReset();
   inner1.style.position = "relative";
   content.innerHTML =
     "<p>position:relative的原始空間不會消失<br>top、right、bottom、left均會有效果</p>";
 });
 positionAbsolute.addEventListener("click", () => {
-  inner1.style.top = "0px";
-  inner1.style.right = "0px";
-  inner1.style.bottom = "0px";
-  inner1.style.left = "0px";
+  positionReset();
   inner1.style.position = "absolute";
   content.innerHTML =
     "<p>position:absolute的原始空間會消失<br>會相對於離自己最近的非static的區塊<br>假使都沒有的話會相對body<br>top、right、bottom、left均會有效果<br></p>";
 });
 positionFixed.addEventListener("click", () => {
-  inner1.style.top = "0px";
-  inner1.style.right = "0px";
-  inner1.style.bottom = "0px";
-  inner1.style.left = "0px";
+  positionReset();
   inner1.style.position = "fixed";
   content.innerHTML =
     "<p>position:fixed的原始空間會消失<br>會固定在畫面的位置上<br>不會隨著畫面移動而變化<br>top、right、bottom、left均會有效果<br></p>";
 });
 positionSticky.addEventListener("click", () => {
-  inner1.style.top = "0px";
-  inner1.style.right = "0px";
-  inner1.style.bottom = "0px";
-  inner1.style.left = "0px";
+  positionReset();
   inner1.style.position = "sticky";
   content.innerHTML =
     "<p>position:sticky的原始空間不會消失<br>會黏在區塊的位置上<br>會隨著畫面移動而變化<br><br>top、right、bottom、left均會有效果<br></p>";
@@ -149,25 +139,25 @@ positionSticky.addEventListener("click", () => {
 // 利用loop簡寫
 for (let i = 0; i < inputPositionDirectionTop.length; i++) {
   inputPositionDirectionTop[i].addEventListener("change", (event) => {
-    console.log(event.target.value); // get change value
+    // console.log(event.target.value); // get change value
     inner1.style.top = event.target.value;
   });
 }
 for (let i = 0; i < inputPositionDirectionRight.length; i++) {
   inputPositionDirectionRight[i].addEventListener("change", (event) => {
-    console.log(event.target.value); // get change value
+    // console.log(event.target.value); // get change value
     inner1.style.right = event.target.value;
   });
 }
 for (let i = 0; i < inputPositionDirectionBottom.length; i++) {
   inputPositionDirectionBottom[i].addEventListener("change", (event) => {
-    console.log(event.target.value); // get change value
+    // console.log(event.target.value); // get change value
     inner1.style.bottom = event.target.value;
   });
 }
 for (let i = 0; i < inputPositionDirectionLeft.length; i++) {
   inputPositionDirectionLeft[i].addEventListener("change", (event) => {
-    console.log(event.target.value); // get change value
+    // console.log(event.target.value); // get change value
     inner1.style.left = event.target.value;
   });
 }

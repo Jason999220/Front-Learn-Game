@@ -23,7 +23,7 @@
         height: 500px;
         bottom: 0;
         right: 0;
-        background: rgb(0, 255, 72);
+        background: peru;
       }
       .box1 {
         position: relative;
@@ -38,6 +38,11 @@
         top: 100px;
         background: rgb(81, 0, 255);
         animation: count 3s infinite;
+      }
+      #boxL {
+        width: 100px;
+        height: 100px;
+        background: salmon;
       }
       @keyframes count {
         0% {
@@ -55,8 +60,35 @@
   </head>
   <body>
     <div class="box">
-      <div class="box1"><div class="box2"></div></div>
+      <div class="box1" id="box1"><div class="box2"></div></div>
+      <div id="boxL">BOXL</div>
     </div>
-    <script></script>
+    <script>
+      const box1 = document.getElementById("box1");
+      const boxL = document.getElementById("boxL");
+      let limit = 5;
+      /*
+      box1.addEventListener("click", () => {
+        console.log("click");
+        for (let i = 0; i < limit; i++) {
+          console.log(i);
+        }
+      });
+      */
+      /* 此時程式碼做了甚麼，與position.js 的140~160  */
+
+      for (let i = 0; i < limit; i++) {
+        box1.addEventListener("click", () => {
+          console.log("click");
+        });
+        console.log(i);
+      }
+
+      // 第一和第二無法同時使用
+      boxL.style.backgroundColor = "purple";
+      //boxL.style = "color:yellow";
+      boxL.style.color = "yellow";
+      boxL.style["font-size"] = "32px";
+    </script>
   </body>
 </html>

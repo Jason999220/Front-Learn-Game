@@ -12,7 +12,7 @@
 input[type="text"] {
   font-size: 1.5rem;
   background: inherit;
-  width: 70%; /* 先寫死，後續改成依文字而改變長度 */
+  min-width: fit-content;
 }
 .container {
   height: calc(100vh - 45px); /* 高度符合顯示器高度 */
@@ -114,10 +114,11 @@ aside {
   font-size: 1.5rem;
 }
 .right {
-  width: 60%;
+  /* width: 40%; */
   border: 1px solid #000;
 }
-.result {
+#result-box {
+  width: 630px;
   background: peru;
   height: 50%;
   display: flex;
@@ -127,8 +128,10 @@ aside {
   overflow-y: scroll;
 }
 .result-inner {
-  padding: 200px;
-  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .content {
   background: blue;
@@ -157,6 +160,10 @@ aside {
 .before-left::before {
   content: "left :";
   font-size: 1.5rem;
+}
+.empty {
+  width: 500px;
+  height: 40px;
 }
 #result {
   width: 250px;
@@ -214,4 +221,59 @@ aside {
   100% {
     left: 200px;
   }
+}
+
+/* typesetting */
+#display-box1 {
+  width: 100px;
+  height: 100px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+}
+#display-box2 {
+  width: 80px;
+  height: 80px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: blue;
+}
+#display-box3 {
+  width: 100px;
+  height: 100px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: green;
+}
+#display-box4 {
+  width: 150px;
+  height: 150px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+}
+#display-box5 {
+  width: 100px;
+  height: 100px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: purple;
+}
+.little {
+  margin-left: 2.2rem;
 }

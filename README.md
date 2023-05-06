@@ -23,3 +23,5 @@ inner2.style.transform = event.target.value;
 });
 
 ## 將 hover 用 JS 載入 CSS inline
+
+## 區塊使用 element.style. 會覆蓋，但文字時候不會(text.js)

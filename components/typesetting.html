@@ -25,28 +25,146 @@
     <div class="container">
       <!-- 選項區 -->
       <aside>
+        <!-- flex-direction -->
+        <div class="course">
+          <input type="radio" name="option" id="flex-direction" />
+          <label for="flex-direction">flex-direction:</label>
+          <input type="text" value="row" id="input-flex-direction" />
+        </div>
+        <!-- flex-wrap -->
+        <div class="course">
+          <input type="radio" name="option" id="flex-wrap" />
+          <label for="flex-wrap">flex-wrap:</label>
+          <input type="text" value="nowrap" id="input-flex-wrap" />
+        </div>
+        <!-- flex-flow -->
+        <div class="course">
+          <input type="radio" name="option" id="flex-flow" />
+          <label for="flex-flow">flex-flow:</label>
+          <input type="text" value="column wrap" id="input-flex-flow" />
+        </div>
+        <!-- justify-content -->
+        <div class="course">
+          <input type="radio" name="option" id="justify-content" />
+          <label for="justify-content">justify-content:</label>
+          <input type="text" value="flex-start" id="input-justify-content" />
+        </div>
+        <!-- align-items -->
+        <div class="course">
+          <input type="radio" name="option" id="align-items" />
+          <label for="align-items">align-items:</label>
+          <input type="text" value="flex-start" id="input-align-items" />
+        </div>
+        <!-- order -->
+        <div class="course">
+          <input type="radio" name="option" id="order" />
+          <label for="order">order:</label>
+          <input type="text" value="1" id="input-order" />
+        </div>
+        <!-- flex-grow -->
+        <div class="course">
+          <input type="radio" name="option" id="flex-grow" />
+          <label for="flex-grow">flex-grow:</label>
+          <div class="little">
+            <div class="box-normal">
+              box-normal : flex-grow :<input
+                type="text"
+                value="0"
+                id="input-flex-grow-normal"
+              />
+            </div>
+            <div class="box-long">
+              box-long : flex-grow :<input
+                type="text"
+                value="0"
+                id="input-flex-grow-long"
+              />
+            </div>
+            <div class="box-short">
+              box-short : flex-grow :<input
+                type="text"
+                value="0"
+                id="input-flex-grow-short"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- flex-shrink -->
+        <div class="course">
+          <input type="radio" name="option" id="flex-shrink" />
+          <label for="flex-shrink">flex-shrink:</label>
+          <div class="little">
+            <div class="box-normal">
+              box-normal : flex-shrink :<input
+                type="text"
+                value="1"
+                id="input-flex-shrink-normal"
+              />
+            </div>
+            <div class="box-long">
+              box-long : flex-shrink :<input
+                type="text"
+                value="1"
+                id="input-flex-shrink-long"
+              />
+            </div>
+            <div class="box-short">
+              box-short : flex-shrink :<input
+                type="text"
+                value="1"
+                id="input-flex-shrink-short"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- flex-basis -->
+        <div class="course">
+          <input type="radio" name="option" id="flex-basis" />
+          <label for="flex-basis">flex-basis:</label>
+          <input type="text" value="1" id="input-flex-basis" />
+          <div class="little">
+            <div class="box-normal">
+              box-normal : flex-basis :<input
+                type="text"
+                value="100px"
+                id="input-flex-basis-normal"
+              />
+            </div>
+          </div>
+        </div>
         <!-- flex -->
-        <p class="course">
+        <div class="course">
           <input type="radio" name="option" id="flex" />
           <label for="flex">flex:</label>
-          <input type="text" value="1px solid #000" id="input-flex" />
-        </p>
+          <input
+            type="text"
+            placeholder="針對box-normal做調整"
+            id="input-flex"
+          />
+        </div>
         <!-- gird -->
-        <p class="course">
+        <div class="course">
           <input type="radio" name="option" id="gird" />
           <label for="gird">gird:</label>
           <input type="text" value="1px solid #000" id="input-gird" />
-        </p>
+        </div>
       </aside>
       <div class="right">
         <!-- 結果區 -->
-        <div class="result">
-          <div id="result"></div>
+        <div id="result-box">
+          <div id="display-box1">box1</div>
+          <div id="display-box2">box2</div>
+          <div id="display-box3">box3</div>
+          <div id="display-box4">box4</div>
+          <div id="display-box5">box5</div>
         </div>
         <!-- 解釋區 -->
         <div class="content" id="content"></div>
       </div>
     </div>
     <script src="../common.js"></script>
+    <script src="./typesetting.js"></script>
   </body>
 </html>
+
+<!-- order 還沒弄 -->
