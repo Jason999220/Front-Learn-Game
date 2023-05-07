@@ -25,6 +25,8 @@
     <div class="container">
       <!-- 選項區 -->
       <aside>
+        <h3>flex 為一維的排版系統</h3>
+        <h3>grid 為二維的網格系統</h3>
         <!-- flex-direction -->
         <div class="course">
           <input type="radio" name="option" id="flex-direction" />
@@ -142,11 +144,108 @@
             id="input-flex"
           />
         </div>
-        <!-- gird -->
+        <!-- grid-template-columns -->
         <div class="course">
-          <input type="radio" name="option" id="gird" />
-          <label for="gird">gird:</label>
-          <input type="text" value="1px solid #000" id="input-gird" />
+          <input type="radio" name="option" id="grid-template-columns" />
+          <label for="grid-template-columns">grid-template-columns:</label>
+          <input
+            type="text"
+            value="100px 100px 100px"
+            id="input-grid-template-columns"
+          />
+        </div>
+        <!-- grid-auto-rows -->
+        <div class="course">
+          <input type="radio" name="option" id="grid-auto-rows" />
+          <label for="grid-auto-rows">grid-auto-rows:</label>
+          <input type="text" value="30px" id="input-grid-auto-rows" />
+        </div>
+        <!-- column-gap -->
+        <div class="course">
+          <input type="radio" name="option" id="column-gap" />
+          <label for="column-gap">column-gap:</label>
+          <input type="text" value="10px" id="input-column-gap" />
+        </div>
+        <!-- row-gap -->
+        <div class="course">
+          <input type="radio" name="option" id="row-gap" />
+          <label for="row-gap">row-gap:</label>
+          <input type="text" value="10px" id="input-row-gap" />
+        </div>
+        <!-- grid-line -->
+        <div class="course">
+          <input type="radio" name="option" id="grid-table-box1" />
+          <label for="grid-table-box1">box1 {</label>
+          <br />
+          <div class="little">
+            grid-column-start :
+            <input
+              type="text"
+              value=""
+              id="input-grid-column-start-box1"
+              placeholder="請輸入數值"
+            />
+            <br />
+            grid-column-end :
+            <input
+              type="text"
+              value=""
+              id="input-grid-column-end-box1"
+              placeholder="請輸入數值"
+            /><br />
+            grid-row-start :
+            <input
+              type="text"
+              value=""
+              id="input-grid-row-start-box1"
+              placeholder="請輸入數值"
+            /><br />
+            grid-row-end :
+            <input
+              type="text"
+              value=""
+              placeholder="請輸入數值"
+              id="input-grid-row-end-box1"
+            />
+            <p>}</p>
+          </div>
+        </div>
+        <div class="course">
+          <input type="radio" name="option" id="grid-table-box2" />
+          <label for="grid-table-box2">box2 {</label>
+          <br />
+          <div class="little">
+            grid-column-start :
+            <input
+              type="text"
+              value=""
+              id="input-grid-column-start-box2"
+              placeholder="請輸入數值"
+            />
+            <br />
+            grid-column-end :
+            <input
+              type="text"
+              value=""
+              id="input-grid-column-end-box2"
+              placeholder="請輸入數值"
+            /><br />
+            grid-row-start :
+            <input
+              type="text"
+              value=""
+              id="input-grid-row-start-box2"
+              placeholder="請輸入數值"
+            /><br />
+            grid-row-end :
+            <input
+              type="text"
+              value=""
+              placeholder="請輸入數值"
+              id="input-grid-row-end-box2"
+            />
+            <p>}</p>
+          </div>
         </div>
       </aside>
       <div class="right">

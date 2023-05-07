@@ -9,10 +9,15 @@
   color: #000;
   border: none;
 }
+h3 {
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+}
 input[type="text"] {
   font-size: 1.5rem;
   background: inherit;
-  min-width: fit-content;
+  min-width: 60%;
 }
 .container {
   height: calc(100vh - 45px); /* 高度符合顯示器高度 */
@@ -100,7 +105,7 @@ nav {
   cursor: pointer;
 }
 aside {
-  width: 65%;
+  width: 60%;
   height: 100%;
   border: 1px solid #000;
   display: flex;
@@ -114,11 +119,11 @@ aside {
   font-size: 1.5rem;
 }
 .right {
-  /* width: 40%; */
+  width: 40%;
   border: 1px solid #000;
 }
 #result-box {
-  width: 630px;
+  width: 100%;
   background: peru;
   height: 50%;
   display: flex;
@@ -225,8 +230,6 @@ aside {
 
 /* typesetting */
 #display-box1 {
-  width: 100px;
-  height: 100px;
   font-size: 1.5rem;
   font-weight: 700;
   display: flex;
@@ -235,8 +238,6 @@ aside {
   background: red;
 }
 #display-box2 {
-  width: 80px;
-  height: 80px;
   font-size: 1.5rem;
   font-weight: 700;
   display: flex;
@@ -245,8 +246,6 @@ aside {
   background: blue;
 }
 #display-box3 {
-  width: 100px;
-  height: 100px;
   font-size: 1.5rem;
   font-weight: 700;
   display: flex;
@@ -255,8 +254,6 @@ aside {
   background: green;
 }
 #display-box4 {
-  width: 150px;
-  height: 150px;
   font-size: 1.5rem;
   font-weight: 700;
   display: flex;
@@ -265,8 +262,6 @@ aside {
   background: yellow;
 }
 #display-box5 {
-  width: 100px;
-  height: 100px;
   font-size: 1.5rem;
   font-weight: 700;
   display: flex;
@@ -275,5 +270,5 @@ aside {
   background: purple;
 }
 .little {
-  margin-left: 2.2rem;
+  margin-left: 1.2rem;
 }
