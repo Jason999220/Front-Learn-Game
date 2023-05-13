@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Wavy</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+        border: none;
+        outline: none;
+      }
+      body {
+        position: relative;
+      }
+      button {
+        font-size: 2rem;
+        border-radius: 5px;
+        padding: 0.5rem;
+        border: 1px solid #000;
+        position: fixed;
+        cursor: pointer;
+      }
+      button:hover {
+        cursor: poniter;
+      }
+      .showLoading {
+        left: 0;
+      }
+      .closeLoading {
+        right: 0;
+      }
+      .loading {
+        width: 1000px;
+        height: 200px;
+        margin: 0 auto;
+        border: 3px solid red;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      .ball.show {
+        opacity: 1;
+      }
+      .ball1 {
+        margin: 1rem 0;
+        background-color: #777;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: auto 1rem;
+      }
+      .ball {
+        opacity: 0;
+        margin: 1rem 0;
+        background-color: #777;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: auto 1rem;
+        transition: opacity 0.3s ease-in;
+        animation: jump 0.5s ease-in infinite;
+      }
+      /* handle 時間差 */
+      .ball:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .ball:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .ball:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .ball:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .ball:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      @keyframes jump {
+        0%,
+        100% {
+          transform: translateY(0%);
+        }
+        50% {
+          transform: translateY(50%);
+        }
+      }
+      .back {
+        text-decoration: none;
+        font-size: 2rem;
+        background-color: darkcyan;
+        padding: 0.5rem;
+        border-radius: 5px;
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+      .back:hover {
+        font-size: 2.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <button onclick="showLoading()" class="showLoading">Show Loading</button>
+    <button onclick="closeLoading()" class="closeLoading">Close Loading</button>
+    <a href="../pages/exercise.html" class="back">Back</a>
+    <script>
+      const ball = document.getElementsByClassName("ball");
+      function showLoading() {
+        for (i = 0; i < ball.length; i++) {
+          ball[i].classList.add("show");
+        }
+      }
+      function closeLoading() {
+        for (i = 0; i < ball.length; i++) {
+          ball[i].classList.remove("show");
+        }
+      }
+    </script>
+  </body>
+</html>

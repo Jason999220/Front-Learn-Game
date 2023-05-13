@@ -12,6 +12,8 @@ const fontStyle = document.getElementById("font-style");
 const inputFontStyle = document.getElementById("input-font-style");
 const letterSpacing = document.getElementById("letter-spacing");
 const inputLetterSpacing = document.getElementById("input-letter-spacing");
+const wordSpacing = document.getElementById("word-spacing");
+const inputWordSpacing = document.getElementById("input-word-spacing");
 const lineHeight = document.getElementById("line-height");
 const inputLineHeight = document.getElementById("input-line-height");
 const textOverflow = document.getElementById("text-overflow");
@@ -77,10 +79,18 @@ inputFontStyle.addEventListener("change", (event) => {
 
 // letter-spacing
 letterSpacing.addEventListener("click", () => {
-  content.innerHTML = "<p>字的間距，允許負值</p>";
+  content.innerHTML = "<p>字元的間距，允許負值</p>";
 });
 inputLetterSpacing.addEventListener("change", (event) => {
   text.style.letterSpacing = event.target.value;
+});
+
+// word-spacing
+wordSpacing.addEventListener("click", () => {
+  content.innerHTML = "<p>單字的間距，允許負值</p>";
+});
+inputWordSpacing.addEventListener("change", (event) => {
+  text.style.wordSpacing = event.target.value;
 });
 
 // line-height

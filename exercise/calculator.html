@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator UI Design</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+        border: none;
+        outline: none;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #091921;
+      }
+      .calculator {
+        position: relative;
+        display: grid;
+      }
+      .calculator .value {
+        grid-column: span 4;
+        height: 70px;
+        text-align: right;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .calculator .num {
+        display: grid;
+        width: 60px;
+        height: 60px;
+        color: #fff;
+        background: #0c2835;
+        place-items: center; /* 配合 grid 應用 */
+        border: 1px solid rgba(70%, 40%, 20%, 0.8);
+        margin-bottom: 1px;
+      }
+      .calculator span:active {
+        background: #74ff3b;
+        color: #111;
+      }
+      .calculator span:hover {
+        font-size: 32px;
+      }
+      .calculator span.clear {
+        grid-column: span 2;
+        width: 125px;
+        background: #ff3077;
+      }
+      .calculator span.equal {
+        grid-column: span 2;
+        width: 125px;
+      }
+      .calculator span.equal:hover {
+        background: #03b1ff;
+      }
+      .back {
+        text-decoration: none;
+        font-size: 2rem;
+        background-color: darkcyan;
+        padding: 0.5rem;
+        border-radius: 5px;
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+      .back:hover {
+        font-size: 2.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="calculator" name="calc">
+      <input class="value" type="text" name="txt" readonly="" />
+      <span class="num clear" onclick="document.calc.txt.value = '' ">c</span>
+      <span class="num" onclick="document.calc.txt.value += ' / ' ">/</span>
+      <span class="num" onclick="document.calc.txt.value += ' * '">*</span>
+      <span class="num" onclick="document.calc.txt.value += '7' ">7</span>
+      <span class="num" onclick="document.calc.txt.value += '8' ">8</span>
+      <span class="num" onclick="document.calc.txt.value += '9' ">9</span>
+      <span class="num" onclick="document.calc.txt.value += ' - ' ">-</span>
+      <span class="num" onclick="document.calc.txt.value += '4' ">4</span>
+      <span class="num" onclick="document.calc.txt.value += '5' ">5</span>
+      <span class="num" onclick="document.calc.txt.value += '6' ">6</span>
+      <span class="num push" onclick="document.calc.txt.value += ' + ' "
+        >+</span
+      >
+      <span class="num" onclick="document.calc.txt.value += '3' ">3</span>
+      <span class="num" onclick="document.calc.txt.value += '2' ">2</span>
+      <span class="num" onclick="document.calc.txt.value += '1' ">1</span>
+      <span class="num" onclick="document.calc.txt.value += '0' ">0</span>
+      <span class="num" onclick="document.calc.txt.value += '00' ">00</span>
+      <span class="num" onclick="document.calc.txt.value += '.' ">.</span>
+      <span
+        class="num equal"
+        onclick="document.calc.txt.value = eval(calc.txt.value) "
+        >=</span
+      >
+    </form>
+    <a href="../pages/exercise.html" class="back">Back</a>
+  </body>
+</html>

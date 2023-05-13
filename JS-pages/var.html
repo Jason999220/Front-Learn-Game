@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="../index.html">BACK</a>
+      <div class="js-title">本網站</div>
+    </nav>
+    <div class="container" style="height: auto">
+      <div class="js-learn">
+        <div class="js-box">
+          <div class="js-code">
+            <!-- <div class="d-flex">
+            var
+            <input type="text" value=" text " id="var-input-1" />
+            ="
+            <input type="text" value=" Jason " id="var-input-1" />
+            ";
+          </div> -->
+            <input type="text" value='var myName = "Jason"' />
+            <input type="text" value="console.log(myName);" />
+            <input type="text" value="console.log(window);" />
+          </div>
+          <div class="js-result"></div>
+          <div class="js-content">Line 1 :<br>指的是用var宣告一個myName變數，將Jason這個字串賦予給myName，這樣以後使用myName就可以得到Jason曪<br>Line 2 :<br>console.log()是一種可以在瀏覽器的開發者工具中(F12)檢視資料的方法，這句話是指將myName這個變數顯示出來<br>Line 3 : <br>打印出window，那window是甚麼呢？我又沒宣告怎麼能使用呢？對這邊就要提到另一個概念【全域變數】<br>簡單來說就是無論在哪個地方都可以呼叫這個變數，用var宣告的變數也會變成全域變數，展開window物件就可以看到剛剛用var定義的myName變數</div>
+        </div>
+        <div class="js-box">
+          <div class="js-code">
+            <input type="text" value='text = "Jason" ;' />
+            <input type="text" value="console.log(name);" />
+          </div>
+          <div class="js-result"></div>
+          <div class="js-content">這裡有兩個問題點<br>1. 假如我們不將變數宣告會怎樣呢？<br>2. 宣告後的變數與全域的變數有何不同<br><br>第一個問題點就像你操作的一樣，就算不宣告還是可以賦於值給變數，但此時的myName變數並不能說是全域變數，嚴格來說稱為window物件下的一個屬性。</div>
+        </div>
+        <div class="js-box">
+          <div class="js-code">
+            <pre>
+              <code>
+                function callName(){
+                  var myName = "Jason" ;
+                }
+                callName()
+                console.log(myName)
+              </code>
+            </pre>
+          </div>
+          <div class="js-result"></div>
+          <div class="js-content"></div>
+        </div>
+    </div>
+    <script src="./var.js"></script>
+  </body>
+</html>

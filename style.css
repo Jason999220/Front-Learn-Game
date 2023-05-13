@@ -9,6 +9,12 @@
   color: #000;
   border: none;
 }
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+}
 h3 {
   font-size: 1.5rem;
   color: red;
@@ -43,10 +49,20 @@ input[type="text"] {
   border-radius: 15px;
   box-shadow: 0 0 5px 5px #000;
   cursor: pointer;
+  font-weight: 700;
 }
 .course-box:hover {
   font-size: 4.2rem;
   box-shadow: 0 0 10px 10px rgb(84, 49, 14);
+}
+.container-full,
+.container-auto {
+  height: 100vh;
+  background: linear-gradient(45deg, peru, lightblue);
+  opacity: 0.7;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 nav {
   width: 100%;
@@ -104,7 +120,7 @@ nav {
   border-radius: 5px;
   cursor: pointer;
 }
-aside {
+.css-aside {
   width: 60%;
   height: 100%;
   border: 1px solid #000;
@@ -271,4 +287,97 @@ aside {
 }
 .little {
   margin-left: 1.2rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 80px;
+}
+.card {
+  border: 1px solid purple;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+/* JS 教學區塊 */
+.js-learn {
+  margin: 1rem 0;
+}
+.course-js {
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 5px #000;
+  cursor: pointer;
+}
+.js-aside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(200px, auto);
+}
+.js-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 200px;
+  border: 1px solid #000;
+  margin-top: 1rem;
+}
+.js-code {
+  background-color: lightsalmon;
+  position: relative;
+  overflow-y: scroll;
+}
+.js-result {
+  background: lightgreen;
+  display: flex;
+  padding-top: 15px;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  line-height: 35px;
+  font-size: 1.5rem;
+  overflow-y: scroll;
+}
+.js-result-text {
+  opacity: 0;
+}
+.js-content {
+  background-color: lightseagreen;
+  line-height: 25px;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem;
+  overflow-y: scroll;
+}
+#var-input-1 {
+  width: auto;
+}
+.js-left {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.js-right {
+  margin: 0 auto;
+}
+.js-output {
+  padding: 0.5rem;
+  position: sticky;
+  bottom: 15px;
+  left: 320px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background: #777;
+}
+#type-finish {
+  opacity: 0;
+  color: red;
+  font-weight: 700;
 }
