@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav style="display: flex">
+      <a class="back" href="../pages/javascript.html" style="width: 10%"
+        >BACK</a
+      >
+      <div class="js-title">
+        JS語法是屬於同步執行，那什麼是同步執行和異步執行呢？
+      </div>
+    </nav>
+    <!-- <div class="container" style="height: auto"> -->
+    <div class="container" style="height: 100vh; flex-direction: column">
+      <!-- string -->
+      <h4>callback</h4>
+      <div class="js-box" style="width: 100%">
+        <div class="code">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code language-html">
+<h1 onclick="alert('@')">HTML</h1></textarea
+              >
+              <!-- console and alert OK　，but function not -->
+            </div>
+          </div>
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+console.log("false");
+              </textarea>
+            </div>
+          </div>
+        </div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run" onclick="runCode()">run</div>
+              <iframe class="js-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="js-console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-javascript.min.js"></script>
+  </body>
+</html>

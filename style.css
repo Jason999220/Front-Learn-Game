@@ -6,24 +6,36 @@
     "Microsoft JhengHei", sans-serif; /* 字形樣式 */
   list-style: none; /* 移除列表的符號 */
   text-decoration: none; /* 移除超連結的下底線 */
-  color: #000;
   border: none;
+  font-weight: 700;
 }
+a {
+  color: #777;
+}
+h3 {
+  font-size: 1.5rem;
+  color: rgba(0, 10, 10, 0.5);
+  text-align: center;
+  margin: auto;
+}
+h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .d-flex {
   display: flex;
   justify-content: center;
   align-items: center;
   width: inherit;
 }
-h3 {
-  font-size: 1.5rem;
-  color: red;
-  text-align: center;
-}
+
 input[type="text"] {
   font-size: 1.5rem;
   background: inherit;
-  min-width: 60%;
+  min-width: 58%;
 }
 .container {
   height: calc(100vh - 45px); /* 高度符合顯示器高度 */
@@ -37,6 +49,8 @@ input[type="text"] {
   margin: 0 auto;
 }
 .course-box {
+  color: #000;
+  padding: 1.2rem;
   margin: 0 auto;
   height: 20%;
   width: 40%;
@@ -49,7 +63,6 @@ input[type="text"] {
   border-radius: 15px;
   box-shadow: 0 0 5px 5px #000;
   cursor: pointer;
-  font-weight: 700;
 }
 .course-box:hover {
   font-size: 4.2rem;
@@ -68,48 +81,29 @@ nav {
   width: 100%;
   height: 45px;
   background: gray;
-  display: grid;
-  grid-template-columns: 1fr 3fr 3fr;
-}
-.search-box {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
-#search-btn {
-  background: inherit;
-  font-size: 1.3rem;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  background: lightcoral;
-  padding: 0.5rem;
-  border-radius: 5px;
-}
-#search {
-  padding: 0.3rem;
-  border: 1px solid #000;
-  width: 80%;
-}
-#search:focus {
-  background: orangered;
-}
+
 .title-box {
-  background: palegreen;
-  margin: 0 0.5rem;
+  min-width: 30%;
+  background: peru;
   display: flex;
-  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
 }
 .title {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.5rem;
   margin-right: 0.5rem;
 }
 .title:hover {
-  color: lightseagreen;
+  color: #000;
+  font-size: 1.6rem;
 }
 .back {
+  opacity: 0.6;
+  padding: 0.8rem;
   margin-right: 1rem;
   display: flex;
   justify-content: center;
@@ -119,6 +113,9 @@ nav {
   font-size: 1.3rem;
   border-radius: 5px;
   cursor: pointer;
+}
+.back:hover {
+  opacity: 1;
 }
 .css-aside {
   width: 60%;
@@ -155,12 +152,12 @@ nav {
   height: 100%;
 }
 .content {
-  background: blue;
+  background: #6e6eff;
   height: 50%;
   font-size: 1.2rem;
   color: black;
-  font-weight: 700;
   padding: 1rem 0 1rem 1.3rem;
+  overflow: auto;
 }
 
 .margin-left {
@@ -247,7 +244,6 @@ nav {
 /* typesetting */
 #display-box1 {
   font-size: 1.5rem;
-  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,7 +251,6 @@ nav {
 }
 #display-box2 {
   font-size: 1.5rem;
-  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,7 +258,6 @@ nav {
 }
 #display-box3 {
   font-size: 1.5rem;
-  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,7 +265,6 @@ nav {
 }
 #display-box4 {
   font-size: 1.5rem;
-  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -279,7 +272,6 @@ nav {
 }
 #display-box5 {
   font-size: 1.5rem;
-  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,12 +283,27 @@ nav {
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 80px;
+  grid-template-rows: repeat(4, 1fr);
+  background: lightblue;
+  height: calc(100vh - 90px);
+}
+#exercise-h1 {
+  height: 45px;
 }
 .card {
-  border: 1px solid purple;
+  background-color: #8d00f5;
+  opacity: 0.7;
   margin: 1rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
+  color: #000;
+}
+.card:hover {
+  opacity: 1;
+  box-shadow: 0 0 10px 4px;
 }
 
 /* JS 教學區塊 */
@@ -306,7 +313,6 @@ nav {
 .course-js {
   margin: 1rem;
   font-size: 2rem;
-  font-weight: 700;
   border: 1px solid #000;
   display: flex;
   align-items: center;
@@ -322,30 +328,108 @@ nav {
 }
 .js-box {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 200px;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: 3fr 2fr;
+  grid-auto-rows: 500px;
   border: 1px solid #000;
-  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background: #000;
+  color: white;
 }
-.js-code {
+
+/* 清除 */
+/* .js-code {
   background-color: lightsalmon;
   position: relative;
   overflow-y: scroll;
+} */
+.code {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-.js-result {
-  background: lightgreen;
-  display: flex;
-  padding-top: 15px;
-  justify-content: start;
-  align-items: center;
-  flex-direction: column;
-  line-height: 35px;
-  font-size: 1.5rem;
+textarea {
+  width: 100%;
+  height: 455px;
+  padding: 2rem 1.5rem;
+  background: #1d1e22;
+  color: #fff;
+  line-height: 1.8rem;
+}
+.js-result-iframe {
+  background: #777;
+  padding: 1.5rem;
+  width: 100%;
+  height: 290px;
+}
+.js-console-iframe {
+  background: #777;
+  width: 100%;
+  height: 115px;
+}
+.js-block,
+.html-block,
+.js-show,
+.js-console {
+  background: #1d1e22;
+  border: 1px solid #777;
+  margin-right: 0.5rem;
   overflow-y: scroll;
+}
+.js-console {
+  margin-top: 0.5rem;
+}
+.js-title-block {
+  background: #777;
+}
+.js-title-result-block {
+  background: #1d1e22;
+  position: relative;
+}
+.js-code-result-title {
+  padding: 0.5rem;
+  background-color: #777;
+  width: 100px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.js-code-result-run {
+  background-color: #777;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  width: 100px;
+  height: 38px;
+  border: 3px solid #1d1e22;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.js-code-result-run:hover {
+  background-color: #f7f7f7;
+  color: #000;
+}
+.js-code-title {
+  padding: 0.5rem;
+  background-color: #1d1e22;
+  width: 100px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+/* 清除 */
+.js-result {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
 }
 .js-result-text {
   opacity: 0;
 }
+/* 清除 */
 .js-content {
   background-color: lightseagreen;
   line-height: 25px;
@@ -379,5 +463,25 @@ nav {
 #type-finish {
   opacity: 0;
   color: red;
-  font-weight: 700;
 }
+
+/* 清除 */
+/* .js-code-title-box,
+.js-result-title-box {
+  background: #777;
+}
+.js-code-title,
+.js-result-title {
+  font-size: 1.4rem;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* .js-code-title {
+  background: lightsalmon;
+}
+.js-result-title {
+  background: lightgreen;
+} */

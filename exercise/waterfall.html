@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waterfall card</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+        border: none;
+        outline: none;
+      }
+      body {
+        margin: 0 auto;
+        padding: 10px;
+        width: 1000px;
+      }
+      .waterfall {
+        width: 100%;
+        margin: 0px auto;
+        column-count: 4;
+        /*欄數*/
+        column-gap: 10px;
+        /*每欄間隔*/
+      }
+      .item {
+        background-color: lightgrey;
+        text-align: center;
+        padding: 5px;
+        box-sizing: border-box;
+        margin: 0 auto 5px;
+        break-inside: avoid;
+        /*定義頁面、列或是區域發生中斷時的元素表現方式。 auto->元素中斷、acoid->元素不中斷*/
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+      .back {
+        text-decoration: none;
+        font-size: 2rem;
+        background-color: #ccccff;
+        padding: 0.5rem;
+        border-radius: 5px;
+        position: fixed;
+        left: 0;
+        top: 0;
+      }
+      .back:hover {
+        font-size: 2.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="back" href="../pages/exercise.html">BACK</a>
+    <div class="waterfall">
+      <div class="item">
+        <!-- 第一張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/2471261/pexels-photo-2471261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        />
+        <p>第一張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第二張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/1624504/pexels-photo-1624504.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <p>第二張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第三張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/3889892/pexels-photo-3889892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        />
+        <p>第三張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第四張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        />
+        <p>第四張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第五張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        />
+        <p>第五張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第六張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/1486974/pexels-photo-1486974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        />
+        <p>第六張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第七張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        />
+        <p>第七張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第八張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/2361600/pexels-photo-2361600.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <p>第八張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第九張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/290470/pexels-photo-290470.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <p>第九張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第十張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/11736477/pexels-photo-11736477.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <p>第十張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第十一張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/1274260/pexels-photo-1274260.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <p>第十一張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第十二張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/545521/pexels-photo-545521.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <p>第十二張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第十三張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <p>第十三張卡片</p>
+      </div>
+      <div class="item">
+        <!-- 第十四張卡片 -->
+        <img
+          src="https://images.pexels.com/photos/327509/pexels-photo-327509.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <p>第十四張卡片</p>
+      </div>
+    </div>
+  </body>
+</html>

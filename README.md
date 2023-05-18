@@ -10,6 +10,10 @@ overflow-y: scroll;
 
 ## 在頁尾加上 Copyright
 
+## 使撰寫 code 部分跟 codepen 相似
+
+## 改變 overflow:scroll 的樣式
+
 ## 利用 JS 將改動的參數動態寫入 CSS inline => 有辦法整段載入嗎，不然就會變成 label + input
 
 transformTranslate.addEventListener("click", () => {

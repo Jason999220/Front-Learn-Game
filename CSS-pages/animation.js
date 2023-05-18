@@ -100,6 +100,3 @@ animation.addEventListener("click", () => {
 inputAnimation.addEventListener("change", (event) => {
   inner2.style.animation = event.target.value;
 });
-inputAnimation.addEventListener("change", (event) => {
-  inner2.style.animation = event.target.value;
-});

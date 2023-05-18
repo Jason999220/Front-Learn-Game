@@ -11,9 +11,3 @@ for (let i = 0; i < handleOutput.length; i++) {
     }
   });
 }
-var a = [1, 2];
-var b = { x: 1, y: 2 };
-var c = function () {};
-console.log("a = ", a);
-console.log("b = ", b);
-console.log("c = ", c);

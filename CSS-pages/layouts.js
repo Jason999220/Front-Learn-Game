@@ -75,6 +75,8 @@ const justifyContent = document.getElementById("justify-content");
 const inputJustifyContent = document.getElementById("input-justify-content");
 const alignItems = document.getElementById("align-items");
 const inputAlignItems = document.getElementById("input-align-items");
+const order = document.getElementById("order");
+const inputOrder = document.getElementById("input-order");
 const flexGrow = document.getElementById("flex-grow");
 const inputFlexGrowNormal = document.getElementById("input-flex-grow-normal");
 const inputFlexGrowLong = document.getElementById("input-flex-grow-long");
@@ -179,6 +181,17 @@ alignItems.addEventListener("click", () => {
 });
 inputAlignItems.addEventListener("change", (event) => {
   resultBox.style.alignItems = event.target.value;
+});
+
+// order
+order.addEventListener("click", () => {
+  flexReset();
+  boxSize();
+  resultBox.style.order = "1";
+  content.innerHTML = "<p>還沒撰寫</p>";
+});
+inputOrder.addEventListener("change", (event) => {
+  resultBox.style.order = event.target.value;
 });
 
 // flex-grow

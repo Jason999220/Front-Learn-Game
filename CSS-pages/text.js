@@ -16,6 +16,8 @@ const wordSpacing = document.getElementById("word-spacing");
 const inputWordSpacing = document.getElementById("input-word-spacing");
 const lineHeight = document.getElementById("line-height");
 const inputLineHeight = document.getElementById("input-line-height");
+const overflow = document.getElementById("overflow");
+const inputOverflow = document.getElementById("input-overflow");
 const textOverflow = document.getElementById("text-overflow");
 const inputTextOverflow = document.getElementById("input-text-overflow");
 const color = document.getElementById("color");
@@ -34,8 +36,8 @@ text.style.fontStyle = "normal";
 text.style.letterSpacing = "";
 text.style.lineHeight = "";
 text.style.whiteSpace = "nowrap";
-text.style.overflow = "hidden";
-text.style.textOverflow = "ellipsis";
+text.style.overflow = "visible";
+// text.style.textOverflow = "ellipsis";
 text.style.color = "white";
 
 // font-size
@@ -99,6 +101,15 @@ lineHeight.addEventListener("click", () => {
 });
 inputLineHeight.addEventListener("change", (event) => {
   text.style.lineHeight = event.target.value;
+});
+
+// overflow
+overflow.addEventListener("click", () => {
+  content.innerHTML =
+    "<p>處理溢出的字<br>visible 為默認值內容不會被修剪，會呈現在元素框外<br>hidden 溢出的內容會被隱藏，無法查看溢出文字<br>scroll 不管有沒有溢出都會以滾動條方式查閱<br>auto 假如內容溢出才會有滾動條</p>";
+});
+inputOverflow.addEventListener("change", (event) => {
+  text.style.overflow = event.target.value;
 });
 
 // text-overflow
