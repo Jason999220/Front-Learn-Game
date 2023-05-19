@@ -37,6 +37,7 @@ input[type="text"] {
   background: inherit;
   min-width: 58%;
 }
+/* use CSS page */
 .container {
   height: calc(100vh - 45px); /* 高度符合顯示器高度 */
   background: linear-gradient(45deg, peru, lightblue); /* 使背景漸層 */
@@ -68,9 +69,9 @@ input[type="text"] {
   font-size: 4.2rem;
   box-shadow: 0 0 10px 10px rgb(84, 49, 14);
 }
-.container-full,
-.container-auto {
-  height: 100vh;
+/* use other page */
+.container-grid {
+  height: calc(100vh - 45px);
   background: linear-gradient(45deg, peru, lightblue);
   opacity: 0.7;
   display: grid;
@@ -82,9 +83,16 @@ nav {
   height: 45px;
   background: gray;
   display: flex;
+}
+.nav-css {
   justify-content: space-between;
 }
-
+.js-nav-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
 .title-box {
   min-width: 30%;
   background: peru;
@@ -321,31 +329,41 @@ nav {
   box-shadow: 0 0 5px 5px #000;
   cursor: pointer;
 }
+.course-js:hover {
+  color: #000;
+  font-size: 2.5rem;
+  box-shadow: 0 0 10px 10px #000;
+}
 .js-aside {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: minmax(200px, auto);
 }
-.js-box {
+.js-box-new {
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr 10px 1fr 10px 1fr;
   grid-auto-rows: 500px;
   border: 1px solid #000;
   margin-bottom: 2rem;
   background: #000;
   color: white;
 }
-
-/* 清除 */
-/* .js-code {
-  background-color: lightsalmon;
-  position: relative;
-  overflow-y: scroll;
-} */
+.js-box {
+  display: grid;
+  grid-template-columns: 3fr 10px 2fr;
+  grid-auto-rows: 500px;
+  border: 1px solid #000;
+  margin-bottom: 2rem;
+  background: #000;
+  color: white;
+}
 .code {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 10px 1fr;
+}
+/* 使 HTML、JS、result 區塊可以拖移 */
+.resize {
+  cursor: col-resize;
 }
 textarea {
   width: 100%;
@@ -355,16 +373,25 @@ textarea {
   color: #fff;
   line-height: 1.8rem;
 }
-.js-result-iframe {
-  background: #777;
-  padding: 1.5rem;
-  width: 100%;
-  height: 290px;
+pre {
+  height: 50px;
+  width: 50px;
 }
-.js-console-iframe {
+.result-iframe {
+  overflow-x: scroll;
+  background: #777;
+  /* padding: 1.5rem; */
+  width: 498.67px;
+  word-wrap: break-word;
+
+  /* height: 450px; */
+  height: 256.5px;
+}
+.console-iframe {
   background: #777;
   width: 100%;
-  height: 115px;
+  /* height: 450px; */
+  /* overflow-y: auto; */
 }
 .js-block,
 .html-block,
@@ -372,8 +399,8 @@ textarea {
 .js-console {
   background: #1d1e22;
   border: 1px solid #777;
-  margin-right: 0.5rem;
-  overflow-y: scroll;
+  /* margin-right: 0.5rem; */
+  /* overflow-y: auto; */
 }
 .js-console {
   margin-top: 0.5rem;
@@ -384,6 +411,8 @@ textarea {
 .js-title-result-block {
   background: #1d1e22;
   position: relative;
+  height: 100%;
+  /* width: 100%; */
 }
 .js-code-result-title {
   padding: 0.5rem;
@@ -422,9 +451,10 @@ textarea {
 }
 /* 清除 */
 .js-result {
+  width: 500px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 3fr 2fr;
 }
 .js-result-text {
   opacity: 0;
@@ -464,24 +494,3 @@ textarea {
   opacity: 0;
   color: red;
 }
-
-/* 清除 */
-/* .js-code-title-box,
-.js-result-title-box {
-  background: #777;
-}
-.js-code-title,
-.js-result-title {
-  font-size: 1.4rem;
-  width: 120px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-/* .js-code-title {
-  background: lightsalmon;
-}
-.js-result-title {
-  background: lightgreen;
-} */

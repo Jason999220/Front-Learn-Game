@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="../pages/javascript.html">BACK</a>
+      <div class="js-nav-title">Loop</div>
+    </nav>
+    <div class="container" style="height: auto; flex-direction: column">
+      <!-- for -->
+      <h4>for</h4>
+      <div class="js-box">
+        <div class="code">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+for ( 初始值 ; 條件 ; 增減 ){
+  code ...
+ }
+i 會從 0開始，每次經過條件判斷成立就執行花括號內的程式碼，反之跳出此迴圈，每執行完一次花括號內的程式碼就會依第三個參數進行增減。
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+for (let i = 0; i < 5; i++) {
+  alert(i);
+}
+              </textarea>
+            </div>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="result-iframe"></iframe>
+            </iframe>
+          </div>
+        </div>
+
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- while -->
+      <h4>while</h4>
+      <div class="js-box" style="width: 100%">
+        <div class="code">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code"></textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">console.log("false");</textarea>
+            </div>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./components/common.js"></script>
+  </body>
+</html>

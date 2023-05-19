@@ -1,7 +1,3 @@
-// 搜尋區
-const search = document.getElementById("search");
-const searchBtn = document.getElementById("search-btn");
-
 // 結果區
 const resultBox = document.getElementById("result-box");
 const result = document.getElementById("result");

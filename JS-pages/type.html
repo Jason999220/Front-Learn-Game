@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <nav style="display: flex">
+    <nav>
       <a class="back" href="../pages/javascript.html" style="width: 10%"
         >BACK</a
       >
@@ -34,7 +34,48 @@
           </div>
         </aside>
         <!-- string -->
-        <div class="js-box">
+        <h4>string</h4>
+        <div class="js-box" style="width: 100%">
+          <div class="code-col-3">
+            <div class="html-block">
+              <div class="js-title-block">
+                <div class="js-code-title">HTML</div>
+                <textarea class="html-code language-html"></textarea>
+              </div>
+            </div>
+            <div class="resize"></div>
+            <div class="js-block">
+              <div class="js-title-block">
+                <div class="js-code-title">JS</div>
+                <textarea class="js-code">
+                var x = "Jason" ;
+                var y = "My name is Jason" ;
+                console.log("x = ", x);
+                console.log("y = ", y);
+              </textarea
+                >
+              </div>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="js-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="js-console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- string -->
+        <!-- <div class="js-box">
           <div class="js-code">
             <div class="js-code-title-box"><p class="js-code-title">JS</p></div>
             <pre>
@@ -59,7 +100,7 @@
             console.log()是一種可以在瀏覽器的開發者工具中(F12)檢視資料的方法，這句話是指將【x】【y】這些變數顯示出來<br />String
             顧名思義就是字串，內容前後利用<br />【' '】或【" "】包著的
           </div>
-        </div>
+        </div> -->
         <!-- number -->
         <div class="js-box">
           <div class="js-code">
@@ -272,6 +313,7 @@
         </div>
       </div>
     </div>
+    <script src="./common.js"></script>
     <script src="./var.js"></script>
   </body>
 </html>

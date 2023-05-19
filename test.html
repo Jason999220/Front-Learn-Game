@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta標籤是給瀏覽器看的，不會顯示在畫面上 -->
+    <meta charset="UTF-8" />
+    <!-- 提示編碼是利用哪種形式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 視窗的大小依照該設備而改變 -->
+    <meta name="robots" content="index, follow" />
+    <!-- 讓瀏覽器更容易找到你的網站 -->
+    <meta name="description" content="這是描述的小字" />
+    <!-- 瀏覽器搜尋結果出來後都會在每個網址下面有簡短的解說 -->
+    <meta name="author" content="Jason" />
+    <!-- 搜索作者名稱 -->
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="h1">HELLO WORLD</h1>
+    <textarea id="code"></textarea>
+    <iframe id="console"></iframe>
+  </body>
+  <script>
+    const h1 = document.getElementById("h1");
+    const code = document.getElementById("code");
+    const result = document.getElementById("console");
+
+    // h1.addEventListener("click", () => {
+    //   let x;
+    //   result.contentDocument.body.innerHTML = ""; // 清空结果
+    //   console.log = (msg) => {
+    //     result.contentDocument.body.innerHTML += msg;
+    //   };
+    //   x = eval(code.value);
+    //   console.log(x); //  save JS code
+    // });
+
+    h1.addEventListener("click", () => {
+      result.contentDocument.body.innerHTML = ""; // 清空结果
+      //let x;
+      try {
+        console.log = (msg) => {
+          alert(msg);
+          result.contentDocument.body.innerHTML += msg + "<br>"; // 在<iframe>中显示结果
+        };
+        eval(code.value); // 在当前上下文中执行代码
+      } catch (error) {
+        console.log(error); // 在<iframe>中显示错误
+      }
+    });
+  </script>
+</html>
