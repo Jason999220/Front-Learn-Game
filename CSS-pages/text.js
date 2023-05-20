@@ -44,9 +44,9 @@ text.style.color = "white";
 fontSize.addEventListener("click", (event) => {
   content.innerHTML = "<p>文字大小，預設16px</p>";
   if (event.target.checked) {
-    console.log(event.target.checked);
+    // console.log(event.target.checked);
     inputFontSize.addEventListener("change", (event) => {
-      console.log("change");
+      // console.log("change");
       text.style.fontSize = event.target.value;
     });
   }

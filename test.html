@@ -16,12 +16,12 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 id="h1">HELLO WORLD</h1>
+    <button id="btn">Click me</button>
     <textarea id="code"></textarea>
     <iframe id="console"></iframe>
   </body>
   <script>
-    const h1 = document.getElementById("h1");
+    const btn = document.getElementById("btn");
     const code = document.getElementById("code");
     const result = document.getElementById("console");
 
@@ -35,12 +35,13 @@
     //   console.log(x); //  save JS code
     // });
 
-    h1.addEventListener("click", () => {
+    // 可以以loop方式獲得 console 值
+    btn.addEventListener("click", () => {
       result.contentDocument.body.innerHTML = ""; // 清空结果
       //let x;
       try {
         console.log = (msg) => {
-          alert(msg);
+          //alert(msg);
           result.contentDocument.body.innerHTML += msg + "<br>"; // 在<iframe>中显示结果
         };
         eval(code.value); // 在当前上下文中执行代码
@@ -48,5 +49,11 @@
         console.log(error); // 在<iframe>中显示错误
       }
     });
+    var a = [1, 2];
+    var b = { x: 1, y: 2 };
+    var c = function () {};
+    console.log("a = ", a);
+    console.log("b = ", b);
+    console.log("c = ", c);
   </script>
 </html>

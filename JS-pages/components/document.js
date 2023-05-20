@@ -1,0 +1,137 @@
+// 給需要HTML的區塊使用
+const jsResult = document.querySelectorAll(".js-result");
+const jsResultText = document.querySelectorAll(".js-result-text");
+const jsCodeRun = document.querySelectorAll(".js-code-result-run");
+const handleOutput = document.querySelectorAll(".js-output");
+const htmlCode = document.querySelectorAll(".html-code");
+const jsCode = document.querySelectorAll(".js-code");
+const resultIframe = document.querySelectorAll(".result-iframe");
+const consoleIframe = document.querySelectorAll(".console-iframe");
+
+// 第三版
+for (let i = 0; i < jsCodeRun.length; i++) {
+  jsCodeRun[i].addEventListener("click", () => {
+    consoleIframe[i].contentDocument.body.innerHTML = ""; // reset
+    resultIframe[i].contentDocument.body.innerHTML = ""; // reset
+    resultIframe[i].contentDocument.body.innerHTML = htmlCode[i].value; // save HTML code
+    resultIframe[i].contentWindow.eval(jsCode[i].value); //  save JS code
+
+    try {
+      // 其餘參數 ...args => 不確定參數會有f幾個的情況
+      console.log = (msg, ...args) => {
+        consoleIframe[
+          i
+        ].contentDocument.body.innerHTML += ` <p style="border-bottom: 1px solid #fff;  font-size: 1.3rem;padding-bottom: 0.5rem">
+            ${msg} ${args}
+          </p>`; // 在<iframe>中显示结果
+      };
+      eval(jsCode[i].value); // 在当前上下文中执行代码
+    } catch (error) {
+      alert(error);
+
+      console.log(error); // 在<iframe>中显示错误
+      consoleIframe[i].contentDocument.body.innerHTML = error;
+    }
+  });
+}
+
+// 第二版
+/*
+try {
+  for (let i = 0; i < jsCodeRun.length; i++) {
+    jsCodeRun[i].addEventListener("click", () => {
+      consoleIframe[i].contentDocument.body.innerHTML = ""; // reset
+      resultIframe[i].contentDocument.body.innerHTML = ""; // reset
+      resultIframe[i].contentDocument.body.innerHTML = htmlCode[i].value; // save HTML code
+      resultIframe[i].contentWindow.eval(jsCode[i].value); //  save JS code
+      // find the 註解 from JS
+      let JSlines = jsCode[i].value.split("\n");
+      const jscodeLines = JSlines.filter((lines) => lines.trim() !== "");
+      // if have console
+      const handleConsole = (code) => {
+        // get console.log(data)
+        const hadleLogValue = (msg) => {
+          // get console data , 是否有其他種寫法
+          // console.log('data') => 移除除了 data 外的字串
+          const consoleValue = msg
+            .replace('console.log("', "")
+            .replace('",', "")
+            .replace('"', "")
+            .replace(");", "");
+          return consoleValue;
+        };
+        // 確定還有 console.log
+        consoleIframe[
+          i
+        ].contentDocument.body.innerHTML += `<pre style='  border-bottom: 1px solid #fff;  font-size: 1.3rem;padding-bottom: 0.5rem;'>${hadleLogValue(
+          code
+        )}</pre>`; // 可以將資訊顯示在consoleIframe
+        // console.log(jscodeLines[j]); // get all console.log
+      };
+
+      // if have loop
+      const handleLoop = (code) => {
+        let fun = new Function(code);
+        fun();
+        consoleIframe[i].contentWindow.eval(jsCode[i].value); //  save JS code
+      };
+
+      // check includes if srt
+      if (jsCode[i].value.includes("for")) {
+      }
+      // get console value
+      for (let j = 0; j < jscodeLines.length; j++) {
+        // check includes console srt
+        if (jscodeLines[j].includes("console.log")) {
+          handleConsole(jscodeLines[j]);
+        }
+      }
+    });
+  }
+} catch (e) {
+  console.error(e);
+}
+*/
+
+// 第一版
+/*
+  function runCode() {
+  console.log(this);
+  const htmlCode = document.querySelectorAll(".html-code");
+  const jsCode = document.querySelectorAll(".js-code");
+  const resultIframe = document.querySelectorAll(".js-result-iframe");
+  const consoleIframe = document.querySelectorAll(".js-console-iframe");
+  for (let i = 0; i < resultIframe.length; i++) {
+    console.log(resultIframe.length);
+    consoleIframe[i].contentDocument.body.innerHTML = ""; // reset
+    resultIframe[i].contentDocument.body.innerHTML = ""; // reset
+    resultIframe[i].contentDocument.body.innerHTML = htmlCode[i].value; // save HTML code
+    resultIframe[i].contentWindow.eval(jsCode[i].value); //  save JS code
+
+    // find the 註解 from JS
+    let JSlines = jsCode[i].value.split("\n");
+    const jscodeLines = JSlines.filter((lines) => lines.trim() !== "");
+    // get console value
+    for (let j = 0; j < jscodeLines.length; j++) {
+      // check includes console srt
+      if (jscodeLines[j].includes("console.log")) {
+        // get console.log(data)
+        console.log = function (msg) {
+          // get console data , 是否有其他種寫法
+          hadleLogValue = (msg) => {
+            // console.log('data') => 移除除了 data 外的字串
+            const consoleValue = msg
+              .replace('console.log("', "")
+              .replace('");', "");
+            return consoleValue;
+          };
+          consoleIframe[i].contentDocument.body.innerHTML += `${hadleLogValue(
+            jscodeLines[j]
+          )}<br>`; // 可以將資訊顯示在consoleIframe
+        };
+        console.log(jscodeLines[j]); // get all console.log
+      }
+    }
+  }
+}
+*/

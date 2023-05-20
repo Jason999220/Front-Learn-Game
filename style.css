@@ -339,9 +339,10 @@ nav {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: minmax(200px, auto);
 }
-.js-box-new {
+/* 只需要 JS 、context、console */
+.js-box-2 {
   display: grid;
-  grid-template-columns: 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: 2fr 10px 3fr;
   grid-auto-rows: 500px;
   border: 1px solid #000;
   margin-bottom: 2rem;
@@ -380,18 +381,14 @@ pre {
 .result-iframe {
   overflow-x: scroll;
   background: #777;
-  /* padding: 1.5rem; */
-  width: 498.67px;
+  width: 100%;
   word-wrap: break-word;
-
-  /* height: 450px; */
   height: 256.5px;
 }
 .console-iframe {
   background: #777;
   width: 100%;
-  /* height: 450px; */
-  /* overflow-y: auto; */
+  height: calc(100% - 38px);
 }
 .js-block,
 .html-block,
@@ -449,15 +446,16 @@ pre {
   text-align: center;
   font-size: 1.2rem;
 }
-/* 清除 */
 .js-result {
-  width: 500px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
 }
-.js-result-text {
-  opacity: 0;
+.result-content {
+  width: 100%;
+  height: calc(100% - 38px);
+  background: #777;
+  padding: 1rem;
 }
 /* 清除 */
 .js-content {

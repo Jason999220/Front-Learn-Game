@@ -35,26 +35,17 @@
         </aside>
         <!-- string -->
         <h4>string</h4>
-        <div class="js-box" style="width: 100%">
-          <div class="code-col-3">
-            <div class="html-block">
-              <div class="js-title-block">
-                <div class="js-code-title">HTML</div>
-                <textarea class="html-code language-html"></textarea>
-              </div>
-            </div>
-            <div class="resize"></div>
-            <div class="js-block">
-              <div class="js-title-block">
-                <div class="js-code-title">JS</div>
-                <textarea class="js-code">
-                var x = "Jason" ;
-                var y = "My name is Jason" ;
-                console.log("x = ", x);
-                console.log("y = ", y);
-              </textarea
-                >
-              </div>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+var x = "Jason" ;
+var y = "My name is Jason" ;
+console.log("x = ", x);
+console.log("y = ", y);
+            </textarea
+              >
             </div>
           </div>
           <div class="resize"></div>
@@ -63,257 +54,287 @@
               <div class="js-title-result-block">
                 <div class="js-code-result-title">Result</div>
                 <div class="js-code-result-run">run</div>
-                <iframe class="js-result-iframe"></iframe>
+                <div class="result-content">
+                  console.log()是一種可以在瀏覽器的開發者工具中(F12)檢視資料的方法，這句話是指將【x】【y】這些變數顯示出來<br />String
+                  顧名思義就是字串，內容前後利用<br />【' '】或【" "】包著的
+                </div>
               </div>
             </div>
             <div class="js-console">
               <div class="js-title-result-block">
                 <p class="js-code-result-title">console</p>
-                <iframe class="js-console-iframe"></iframe>
+                <iframe class="console-iframe"></iframe>
               </div>
             </div>
           </div>
         </div>
-        <!-- string -->
-        <!-- <div class="js-box">
-          <div class="js-code">
-            <div class="js-code-title-box"><p class="js-code-title">JS</p></div>
-            <pre>
-                var x = "Jason" ;
-                var y = "My name is Jason" ;
-
-                console.log("x = ", x);
-                console.log("y = ", y);
-                <button class="js-output" onclick="handleOutput">輸出</button>
-            </pre>
-          </div>
-          <div class="js-result">
-            <div class="js-result-title-box">
-              <p class="js-result-title">Console</p>
+        <!-- Number -->
+        <h4>Number</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+var x = 1 ;
+var y = 18 ;
+console.log("x = ", x);
+console.log("y = ", y);
+              </textarea>
             </div>
-            <pre class="js-result-text">
-              x = Jason
-              y = My name is Jason
-            </pre>
           </div>
-          <div class="js-content">
-            console.log()是一種可以在瀏覽器的開發者工具中(F12)檢視資料的方法，這句話是指將【x】【y】這些變數顯示出來<br />String
-            顧名思義就是字串，內容前後利用<br />【' '】或【" "】包著的
-          </div>
-        </div> -->
-        <!-- number -->
-        <div class="js-box">
-          <div class="js-code">
-            <div class="js-code-title-box"><p class="js-code-title">JS</p></div>
-            <pre>
-                var x = 1 ;
-                var y = 18 ;
-
-                console.log("x = ", x);
-                console.log("y = ", y);
-                <button class="js-output" onclick="handleOutput">輸出</button>
-            </pre>
-          </div>
+          <div class="resize"></div>
           <div class="js-result">
-            <div class="js-result-title-box">
-              <p class="js-result-title">Console</p>
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <div class="result-content">
+                  Number 顧名思義就是數字，可以有整數或浮點數
+                </div>
+              </div>
             </div>
-            <pre class="js-result-text">
-              x = 1
-              y = 18
-            </pre>
-          </div>
-          <div class="js-content">
-            Number 顧名思義就是數字，可以有整數或浮點數
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
           </div>
         </div>
+
         <!-- boolean -->
-        <div class="js-box">
-          <div class="js-code">
-            <div class="js-code-title-box"><p class="js-code-title">JS</p></div>
-            <pre>
-                var x = true ;
-                var y = false ;
-
-                console.log("x = ", x);
-                console.log("y = ", y);
-                <button class="js-output" onclick="handleOutput">輸出</button>
-            </pre>
-          </div>
-          <div class="js-result">
-            <div class="js-result-title-box">
-              <p class="js-result-title">Console</p>
+        <h4>boolean</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+var x = true ;
+var y = false ;
+console.log("x = ", x);
+console.log("y = ", y);
+              </textarea>
             </div>
-            <pre class="js-result-text">
-              x = true
-              y = false
-            </pre>
           </div>
-          <div class="js-content">
-            Boolean 是一個布林值，僅有True、False兩種值，之後很常用來判斷資料
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <div class="result-content">
+                  Boolean
+                  是一個布林值，僅有True、False兩種值，之後很常用來判斷資料
+                </div>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
           </div>
         </div>
+
         <!-- symbol -->
-        <div class="js-box">
-          <div class="js-code">
-            <div class="js-code-title-box"><p class="js-code-title">JS</p></div>
-            <pre>
-                var x = Symbol() ;
-                var y = Symbol('Jason') ;
+        <h4>symbol</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+var x = Symbol() ;
+var y = Symbol('Jason') ;
+console.log("x = ", x);
+console.log("y = ", y);
+console.log(y.description);
 
-                console.log("x = ", x);
-                console.log("y = ", y);
-                console.log(y.description);
-                <button class="js-output" onclick="handleOutput">輸出</button>
-            </pre>
-          </div>
-          <div class="js-result">
-            <div class="js-result-title-box">
-              <p class="js-result-title">Console</p>
+這個會出問題
+              </textarea>
             </div>
-            <pre class="js-result-text">
-              x = Symbol()
-              y = Symbol(Jason)
-              Jason
-            </pre>
           </div>
-          <div class="js-content">
-            Symbol()的值是獨一無二的，可以用【description】屬性取得()內的資料<br />由於物件的key有可能會發生重複的情況導致資料被覆蓋，此時就可以使用Symbol()解決此問題看以下範例<br />
-            var obj = {<br />[Symbol('Jason')] : {... },[Symbol('Jason')] :
-            {...}<br />}
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <div class="result-content">
+                  Symbol()的值是獨一無二的，可以用【description】屬性取得()內的資料<br />由於物件的key有可能會發生重複的情況導致資料被覆蓋，此時就可以使用Symbol()解決此問題看以下範例<br />
+                  var obj = {<br />[Symbol('Jason')] : {... },[Symbol('Jason')]
+                  : {...}<br />}
+                </div>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
           </div>
         </div>
+
         <!-- Null -->
-        <div class="js-box">
-          <div class="js-code">
-            <div class="js-code-title-box"><p class="js-code-title">JS</p></div>
-            <pre>
-              var x = null ;
-
-              console.log("x = ", x);
-              <button class="js-output" onclick="handleOutput">輸出</button>
-            </pre>
-          </div>
-          <div class="js-result">
-            <div class="js-result-title-box">
-              <p class="js-result-title">Console</p>
+        <h4>Null</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+var x = null ;
+console.log(x);
+              </textarea>
             </div>
-            <pre class="js-result-text">>x = null</pre>
           </div>
-          <div class="js-content">
-            null 只有 null這個值，它視為空值，可以想像成「沒有」的概念
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <div class="result-content">
+                  null 只有 null這個值，它視為空值，可以想像成「沒有」的概念
+                </div>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
           </div>
         </div>
+
         <!-- undefined -->
-        <div class="js-box">
-          <div class="js-code">
-            <div class="js-code-title-box"><p class="js-code-title">JS</p></div>
-            <pre>
-              var x  ;
-
-              console.log("x = ", x);
-              <button class="js-output" onclick="handleOutput">輸出</button>
-            </pre>
-          </div>
-          <div class="js-result">
-            <div class="js-result-title-box">
-              <p class="js-result-title">Console</p>
+        <h4>undefined</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+var x  ;
+console.log(x);
+              </textarea>
             </div>
-            <pre class="js-result-text">>x = undefined</pre>
           </div>
-          <div class="js-content">
-            undefined 只有 undefined 這個值<br />當變數有宣告但沒有被賦予值的時候，它的值就會是undefined<br />要注意它與【not
-            defined】不一樣，後者是變數未被宣告，不屬於原始型別，是一種程式執行時會出現的錯誤訊息
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <div class="result-content">
+                  undefined 只有 undefined 這個值<br />當變數有宣告但沒有被賦予值的時候，它的值就會是undefined<br />要注意它與【not
+                  defined】不一樣，後者是變數未被宣告，不屬於原始型別，是一種程式執行時會出現的錯誤訊息
+                </div>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
           </div>
         </div>
+
         <!-- 物件型別 -->
-        <div class="js-box">
-          <div class="js-code">
-            <div class="js-code-title-box"><p class="js-code-title">JS</p></div>
-            <pre>
-                var a = [1,2] ;
-                var b = {x:1,y:2} ;
-                var c = function(){} ;
-
-                console.log("a = ", a);
-                console.log("b = ", b);
-                console.log("c = ", c);
-                <button class="js-output" onclick="handleOutput">輸出</button>
-            </pre>
-          </div>
-          <div class="js-result">
-            <div class="js-result-title-box">
-              <p class="js-result-title">Console</p>
+        <h4>物件型別</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+var a = [1,2] ;
+var b = {x:1,y:2} ;
+var c = function(){} ;
+console.log("a = ", a);
+console.log("b = ", b);
+console.log("c = ", c);
+              </textarea>
             </div>
-            <pre class="js-result-text">
-              a = [1,2]
-              b = {x:1,y:2}
-              c = f(){}
-            </pre>
           </div>
-          <div class="js-content">
-            接下來就換物件型別啦~~基本上除了以上的原始型別都可以稱作為物件型別。<br />此時的a變數稱為陣列是以方括號包起來，裡面可以放任何資料，可以有字串、數字、boolean等。<br />此時的b變數稱為物件是以花括號包起來，裡面是以【key:value】的形式儲存資料<br />此時的c變數稱為函式<br />以上這些會在稍後詳細說明，現在只需要知道它們為物件型別即可
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <div class="result-content">
+                  接下來就換物件型別啦~~基本上除了以上的原始型別都可以稱作為物件型別。<br />此時的a變數稱為陣列是以方括號包起來，裡面可以放任何資料，可以有字串、數字、boolean等。<br />此時的b變數稱為物件是以花括號包起來，裡面是以【key:value】的形式儲存資料<br />此時的c變數稱為函式<br />以上這些會在稍後詳細說明，現在只需要知道它們為物件型別即可
+                </div>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- typeof -->
-        <div class="js-box">
-          <div class="js-code">
-            <div class="js-code-title-box"><p class="js-code-title">JS</p></div>
-            <pre>
-                var a = "Jason" ;
-                var b = 5 ;
-                var c = true ;
-                var d = Symbol();
-                var e = null ;
-                var f  ;
-                var g = [];
-                var h = {};
-                var i = function () {};
 
-                console.log('typeof a = ', typeof a);
-                console.log('typeof b = ', typeof b);
-                console.log('typeof c = ', typeof c);
-                console.log('typeof d = ', typeof d);
-                console.log('typeof e = ', typeof e);
-                console.log('typeof f = ', typeof f);
-                console.log("typeof g = ", typeof g);
-                console.log("typeof h = ", typeof h);
-                console.log("typeof i = ", typeof i);
-                <button class="js-output" onclick="handleOutput">輸出</button>
-            </pre>
-          </div>
-          <div class="js-result">
-            <div class="js-result-title-box">
-              <p class="js-result-title">Console</p>
+        <!-- typeof -->
+        <h4>typeof</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+var a = "Jason" ;
+var b = 5 ;
+var c = true ;
+var d = Symbol();
+var e = null ;
+var f  ;
+var g = [];
+var h = {};
+var i = function () {};
+console.log('typeof a = ', typeof a);
+console.log('typeof b = ', typeof b);
+console.log('typeof c = ', typeof c);
+console.log('typeof d = ', typeof d);
+console.log('typeof e = ', typeof e);
+console.log('typeof f = ', typeof f);
+console.log("typeof g = ", typeof g);
+console.log("typeof h = ", typeof h);
+console.log("typeof i = ", typeof i);
+              </textarea>
             </div>
-            <pre class="js-result-text">
-              typeof a = string
-              typeof b = number
-              typeof c =boolean
-              typeof d = symbol
-              typeof e = object
-              typeof f = undefined
-              typeof g = object
-              typeof h = object
-              typeof i = function
-            </pre>
           </div>
-          <div class="js-content">
-            可以使用【typeof 變數】檢查該變數的型別<br />變數是甚麼我們稍後就會介紹<br />
-            別急著看答案 ~<br />
-            各位可以想想看此時的變數均為什麼型別？
-            <span id="type-finish"
-              ><br />一定很好奇為甚麼null、function和自己不太一樣吧<br />null
-              是得到 object 而非
-              null，這是一個大bug，但若修正這個bug可能會導致許多網站壞掉，因此就不修了。<br />function是得到
-              function 而非
-              object，函式是一種「可呼叫的物件」讓它成為能夠被調用的物件。</span
-            >
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <div class="result-content">
+                  可以使用【typeof 變數】檢查該變數的型別<br />變數是甚麼我們稍後就會介紹<br />
+                  別急著看答案 ~<br />
+                  各位可以想想看此時的變數均為什麼型別？
+                  <span id="type-finish"
+                    ><br />一定很好奇為甚麼null、function和自己不太一樣吧<br />null
+                    是得到 object 而非
+                    null，這是一個大bug，但若修正這個bug可能會導致許多網站壞掉，因此就不修了。<br />function是得到
+                    function 而非
+                    object，函式是一種「可呼叫的物件」讓它成為能夠被調用的物件。</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="./common.js"></script>
-    <script src="./var.js"></script>
+    <script src="./components/common.js"></script>
   </body>
 </html>

@@ -15,29 +15,15 @@
     <div class="container" style="height: auto; flex-direction: column">
       <!-- for -->
       <h4>for</h4>
-      <div class="js-box">
-        <div class="code">
-          <div class="html-block">
-            <div class="js-title-block">
-              <div class="js-code-title">HTML</div>
-              <textarea class="html-code">
-for ( 初始值 ; 條件 ; 增減 ){
-  code ...
- }
-i 會從 0開始，每次經過條件判斷成立就執行花括號內的程式碼，反之跳出此迴圈，每執行完一次花括號內的程式碼就會依第三個參數進行增減。
-              </textarea>
-            </div>
-          </div>
-          <div class="resize"></div>
-          <div class="js-block">
-            <div class="js-title-block">
-              <div class="js-code-title">JS</div>
-              <textarea class="js-code">
+      <div class="js-box-2">
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
 for (let i = 0; i < 5; i++) {
-  alert(i);
+console.log(i);
 }
-              </textarea>
-            </div>
+            </textarea>
           </div>
         </div>
         <div class="resize"></div>
@@ -46,11 +32,12 @@ for (let i = 0; i < 5; i++) {
             <div class="js-title-result-block">
               <div class="js-code-result-title">Result</div>
               <div class="js-code-result-run">run</div>
-              <iframe class="result-iframe"></iframe>
-            </iframe>
+              <div class="result-content">
+                for ( 初始值 ; 條件 ; 增減 ){ code ... } i 會從
+                0開始，每次經過條件判斷成立就執行花括號內的程式碼，反之跳出此迴圈，每執行完一次花括號內的程式碼就會依第三個參數進行增減。
+              </div>
+            </div>
           </div>
-        </div>
-
           <div class="js-console">
             <div class="js-title-result-block">
               <p class="js-code-result-title">console</p>
@@ -59,21 +46,107 @@ for (let i = 0; i < 5; i++) {
           </div>
         </div>
       </div>
-      <!-- while -->
-      <h4>while</h4>
-      <div class="js-box" style="width: 100%">
+
+      <div class="js-box-2">
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+let arr = [' David ',' Lucy ',' Anna ',' Alex ']
+for (let i = 0; i < arr.length; i++) {
+  console.log( ` index : ${i} , Name : ${arr[i]} ` );
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <div class="result-content">
+                各位可以想想看假如此時的 let 改成 var
+                會導致甚麼狀況發生呢？有BUG
+              </div>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- forEach -->
+      <h4>forEach</h4>
+      <div class="js-box-2">
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+let arr = [' David ',' Lucy ',' Anna ',' Alex ']
+arr.forEach( (item,i)=>{
+  console.log( ` index : ${i} , Name : ${item} ` );
+})
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <div class="result-content">
+                for 和 forEach 其實差不多看使用者比較喜歡哪一種 但 forEach
+                並不是所有陣列都可使用，像類陣列(Array-like)就沒有 forEach
+                方法可使用
+              </div>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 有 BUG
+      <div class="js-box">
         <div class="code">
           <div class="html-block">
             <div class="js-title-block">
               <div class="js-code-title">HTML</div>
-              <textarea class="html-code"></textarea>
+              <textarea class="html-code"> </textarea>
             </div>
           </div>
           <div class="resize"></div>
           <div class="js-block">
             <div class="js-title-block">
               <div class="js-code-title">JS</div>
-              <textarea class="js-code">console.log("false");</textarea>
+              <textarea class="js-code">
+let arr = [' David ',' Lucy ',' Anna ',' Alex ']
+function fn() {
+  console.log(arguments);
+  // for loop 可以正常運行
+  for (let i = 0; i < arguments.length; i++) {
+    const item = arguments[i];
+    console.log(i, item);
+  }
+
+  // 錯誤：Uncaught TypeError: arguments.forEach is not a function
+  arguments.forEach(item => {
+    console.log(item);
+  });
+}
+
+fn(' David ',' Lucy ',' Anna ',' Alex ');
+              </textarea>
             </div>
           </div>
         </div>
@@ -84,6 +157,43 @@ for (let i = 0; i < 5; i++) {
               <div class="js-code-result-title">Result</div>
               <div class="js-code-result-run">run</div>
               <iframe class="result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    -->
+
+      <!-- while -->
+      <h4>while</h4>
+      <div class="js-box-2">
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+let i = 0;
+while (i < 5) {
+  i++;
+  console.log(i);
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <div class="result-content">
+                while ( 條件 ){ code ... } i
+                會從使用者預設值開始，不同的是while會先進入迴圈執行完再進行判斷條件，假如符合條件就在進迴圈執行，反之跳出此迴圈
+              </div>
             </div>
           </div>
           <div class="js-console">
