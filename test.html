@@ -14,46 +14,30 @@
     <meta name="author" content="Jason" />
     <!-- 搜索作者名稱 -->
     <title>Document</title>
+    <style>
+      * {
+        font-size: 24px;
+        font-size: 1.5em;
+      }
+      .red {
+        color: red;
+      }
+      .yellow {
+        color: yellow;
+      }
+      .orange {
+        color: orange;
+      }
+      .bg-green {
+        background: green;
+      }
+    </style>
   </head>
   <body>
-    <button id="btn">Click me</button>
-    <textarea id="code"></textarea>
-    <iframe id="console"></iframe>
+    <div class="bg-green">black</div>
+    <div class="red">red</div>
+    <div class="red bg-green">red</div>
+    <div class="yellow">yellow</div>
+    <div class="orange">orange</div>
   </body>
-  <script>
-    const btn = document.getElementById("btn");
-    const code = document.getElementById("code");
-    const result = document.getElementById("console");
-
-    // h1.addEventListener("click", () => {
-    //   let x;
-    //   result.contentDocument.body.innerHTML = ""; // 清空结果
-    //   console.log = (msg) => {
-    //     result.contentDocument.body.innerHTML += msg;
-    //   };
-    //   x = eval(code.value);
-    //   console.log(x); //  save JS code
-    // });
-
-    // 可以以loop方式獲得 console 值
-    btn.addEventListener("click", () => {
-      result.contentDocument.body.innerHTML = ""; // 清空结果
-      //let x;
-      try {
-        console.log = (msg) => {
-          //alert(msg);
-          result.contentDocument.body.innerHTML += msg + "<br>"; // 在<iframe>中显示结果
-        };
-        eval(code.value); // 在当前上下文中执行代码
-      } catch (error) {
-        console.log(error); // 在<iframe>中显示错误
-      }
-    });
-    var a = [1, 2];
-    var b = { x: 1, y: 2 };
-    var c = function () {};
-    console.log("a = ", a);
-    console.log("b = ", b);
-    console.log("c = ", c);
-  </script>
 </html>
