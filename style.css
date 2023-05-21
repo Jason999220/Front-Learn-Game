@@ -358,6 +358,15 @@ nav {
   background: #000;
   color: white;
 }
+.css-box {
+  display: grid;
+  grid-template-columns: 2fr 10px 3fr 10px 3fr;
+  grid-auto-rows: 500px;
+  border: 1px solid #000;
+  margin-bottom: 2rem;
+  background: #000;
+  color: white;
+}
 .code {
   display: grid;
   grid-template-columns: 1fr 10px 1fr;
@@ -385,6 +394,14 @@ pre {
   word-wrap: break-word;
   height: 256.5px;
 }
+.css-result-iframe {
+  overflow-x: scroll;
+  background: #777;
+  width: 100%;
+  word-wrap: break-word;
+  height: calc(100% - 38px);
+  position: relative;
+}
 .console-iframe {
   background: #777;
   width: 100%;
@@ -392,6 +409,7 @@ pre {
 }
 .js-block,
 .html-block,
+.css-block,
 .js-show,
 .js-console {
   background: #1d1e22;
@@ -413,9 +431,9 @@ pre {
 }
 .js-code-result-title {
   padding: 0.5rem;
-  background-color: #777;
   width: 100px;
   text-align: center;
+  background-color: #777;
   font-size: 1.2rem;
   color: #000;
 }
