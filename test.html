@@ -14,30 +14,25 @@
     <meta name="author" content="Jason" />
     <!-- 搜索作者名稱 -->
     <title>Document</title>
-    <style>
-      * {
-        font-size: 24px;
-        font-size: 1.5em;
-      }
-      .red {
-        color: red;
-      }
-      .yellow {
-        color: yellow;
-      }
-      .orange {
-        color: orange;
-      }
-      .bg-green {
-        background: green;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/javascript/javascript.min.js"></script>
   </head>
   <body>
-    <div class="bg-green">black</div>
-    <div class="red">red</div>
-    <div class="red bg-green">red</div>
-    <div class="yellow">yellow</div>
-    <div class="orange">orange</div>
+    <textarea id="codeTextarea"></textarea>
+    <script>
+      var codeTextarea = document.getElementById("codeTextarea");
+
+      var editor = CodeMirror.fromTextArea(codeTextarea, {
+        mode: "xml",
+        theme: "default",
+        lineNumbers: true,
+        autoCloseTags: true, // 自动闭合标签
+        // 更多设置...
+      });
+    </script>
   </body>
 </html>

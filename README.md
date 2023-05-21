@@ -55,7 +55,7 @@ inner2.style.transform = event.target.value;
 
 #### 高亮模組 => CodeMirror
 
-  <!--begin code mirror -->
+   <!--begin code mirror -->
 
     <!--下面两个是使用Code Mirror必须引入的-->
     <!-- CodeMirror 核心文件 -->
@@ -65,11 +65,19 @@ inner2.style.transform = event.target.value;
     />
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.js"></script>
 
-    <!-- Java 代码高亮 -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/clike/clike.js"></script>
+    <!-- 高亮代碼 -->
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="https://codemirror.net/mode/xml/xml.js"></script>
+    <script src="https://codemirror.net/mode/css/css.js"></script>
+    <script src="https://codemirror.net/mode/javascript/javascript.js"></script>
 
-    <!-- Groovy 代码高亮 -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/groovy/groovy.js"></script>
+    <!-- CodeMirror Add-ons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/addon/edit/closebrackets.min.js"></script>
+
+    <script src="https://codemirror.net/addon/edit/closebrackets.js"></script>
+    <script src="https://codemirror.net/addon/edit/closetag.js"></script>
+    <!-- 控制縮排 => smartIndent -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/addon/indent/indent.min.js"></script>
 
     <!-- 主题样式文件 -->
     <link
