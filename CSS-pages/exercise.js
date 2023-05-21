@@ -14,7 +14,7 @@ for (let i = 0; i < jsCodeRun.length; i++) {
     : cssCode[i].value;
   let storageResult = localStorage.getItem(`storageResult${i}`)
     ? localStorage.getItem(`storageResult${i}`)
-    : resultCode[i].value;
+    : null;
   htmlCode[i].innerHTML = storageHmtl; // 取出 HTML
   cssCode[i].innerHTML = storageCss; // 取出 CSS
   cssResultIframe[i].contentDocument.body.innerHTML = storageResult; // 取出 result
