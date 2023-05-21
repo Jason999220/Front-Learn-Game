@@ -2,20 +2,39 @@
 
 利用點擊圖片或區塊顯示效果，使用者可自行調整參數，藉由圖形實際演練而熟悉語法
 
-## 將程式碼區改用滾軸方式
+## Learn
 
-overflow-y: scroll;
+### 將程式碼區改用滾軸方式
 
-## 使 js 的 console 值，顯示在 Iframe 上 =>
+### 將 hover 用 JS 載入 CSS inline
 
-1. 先取得 console 字串
-2. 在進入 console.log = fn(msg){}
-3. 在函式中利用 str.replace() 方法取出 console.log(data) 中的 data
-4. 之後利用 iframe.contentDocument.body.innerHTML += `${hadleLogValue(msg)}<br>`; 將 data 呈現在畫面
+### 將使用者在 CSS page 中的小試身手輸入的 code 儲存在 localStroage
 
-## 改變 overflow:scroll 的樣式
+### 程式碼高亮
 
-## 利用 JS 將改動的參數動態寫入 CSS inline => 有辦法整段載入嗎，不然就會變成 label + input
+## Questions
+
+### 使 js 的 console 值，顯示在 Iframe 上 =>
+
+jsCodeRun.addEventListener("click", () => {
+consoleIframe.contentDocument.body.innerHTML = ""; // reset
+resultIframe.contentDocument.body.innerHTML = ""; // reset
+resultIframe.contentDocument.body.innerHTML = htmlCode.value; // save HTML code
+resultIframe.contentWindow.eval(jsCode.value); // save JS code
+try {
+// 其餘參數 ...args => 不確定參數會有 f 幾個的情況
+console.log = (msg, ...args) => {
+consoleIframe.contentDocument.body.innerHTML += ` <p style="border: 1px solid #fff">${msg} ${args}</p>`; // 在<iframe>中顯示结果
+};
+eval(jsCode[i].value); // 執行當前 JS 代碼
+} catch (error) {
+alert(error);
+console.log(error); // 在<iframe>中顯示錯誤
+consoleIframe[i].contentDocument.body.innerHTML = error;
+}
+});
+
+### 利用 JS 將改動的參數動態寫入 CSS inline => 有辦法整段載入嗎，不然就會變成 label + input
 
 transformTranslate.addEventListener("click", () => {
 inner2ResetStyle();
@@ -27,18 +46,14 @@ inputTransformTranslate.addEventListener("change", (event) => {
 inner2.style.transform = event.target.value;
 });
 
-## 將 hover 用 JS 載入 CSS inline
+### 使撰寫 code 部分跟 codepen 相似 => 如何高亮
 
-## 區塊使用 element.style. 會覆蓋，但文字時候不會(text.js)
-
-## 使撰寫 code 部分跟 codepen 相似 => 如果要有高亮 可以使用 prism.min.css
-
-### 高亮模組 => prism
+#### 高亮模組 => prism
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-javascript.min.js"></script>
 
-### 高亮模組 => CodeMirror
+#### 高亮模組 => CodeMirror
 
   <!--begin code mirror -->
 
@@ -76,7 +91,7 @@ inner2.style.transform = event.target.value;
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/edit/matchbrackets.js"></script>
     <!--end Code Mirror -->
 
-## JS clone
+## JS clone 參考網址
 
 https://github.com/sivadass/jsarena/blob/main/web/src/scripts/index.js
 https://jsarena.dev/

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav class="nav-css">
+      <a class="back" href="../index.html">BACK</a>
+      <h3></h3>
+      <!-- 各大選項標題 -->
+      <div class="title-box">
+        <a class="title" href="./concept.html">介紹</a>
+        <a class="title" href="./selector.html">CSS選擇器</a>
+        <a class="title" href="./position.html">位置</a>
+        <a class="title" href="./animation.html">特效</a>
+        <a class="title" href="./layouts.html">排版</a>
+        <a class="title" href="./text.html">文字</a>
+        <a class="title" href="./exercise.html">小試身手</a>
+      </div>
+    </nav>
+    <div class="container" style="flex-direction: column">
+      <div class="css-concept">
+        <div class="concept-card">
+          <pre>
+            div { background-color : peru ;}
+
+            div => 選擇器
+            background-color => 屬性
+            peru => 值
+
+            css語法是由 => 選擇器{ 屬性 : 值 ; } 所構成的，屬性和值是以:來連接
+          </pre>
+        </div>
+        <div class="concept-card">
+          <pre>
+            div { font-size : 16px ;}
+            div { color : red ;}
+            div { background-color : peru ;}
+
+            如果有是針對相同的選擇器則可合併成一個
+            但記得要在每個值的結束加上分號【;】
+
+            div {
+              font-size : 16px ;
+              color : red ;
+              background-color : peru ;
+            }
+          </pre>
+        </div>
+        <div class="concept-card">
+          <pre>
+            h2 {
+              color : peru ;
+            }
+            h2 {
+              color : red ;
+            }
+
+            假如選擇器有重複的屬性則會以權重來判定
+            假如權重相同則會以程式碼的先後順序
+            權重是什麼咚咚後續會討論到 ~~~
+          </pre>
+        </div>
+        <div class="concept-card">
+          <pre>
+            h1 {color : peru ; }
+            h2 {color : peru ; }
+            p {color : peru ; }
+
+            若有相同的屬性與值可以將其合併成同一條，切記選擇器要以逗號【,】後分開
+
+            h1, h2, p {color : peru ; }
+          </pre>
+        </div>
+      </div>
+    </div>
+    <script src="./exercise.js"></script>
+  </body>
+</html>

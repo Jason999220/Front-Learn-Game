@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav class="nav-css">
+      <a class="back" href="../index.html">BACK</a>
+      <h3>選擇器是為了讓我們方便針對不同的對象進行操作的工具</h3>
+      <!-- 各大選項標題 -->
+      <div class="title-box">
+        <a class="title" href="./concept.html">介紹</a>
+        <a class="title" href="./selector.html">CSS選擇器</a>
+        <a class="title" href="./position.html">位置</a>
+        <a class="title" href="./animation.html">特效</a>
+        <a class="title" href="./layouts.html">排版</a>
+        <a class="title" href="./text.html">文字</a>
+        <a class="title" href="./exercise.html">小試身手</a>
+      </div>
+    </nav>
+    <div class="container" style="height: auto; flex-direction: column">
+      <!-- 萬用選擇器 * -->
+      <h4>萬用選擇器 【*】</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div>Box1</div>
+<div>Box2</div>
+<div>Box3</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  color:red;
+  font-size:32px;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                * 是以HTML文件中所有的元素做為對象進行操作
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 標籤選擇器 tag -->
+      <h4>標籤選擇器 【tag】</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<h1>Box3</h1>
+<div>Box1</div>
+<p>Box2</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+h1{
+  color:purple;
+}
+div{
+  background: peru;
+}
+p{
+  color:orange;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"> </iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                標籤選擇器是以HTML文件中找到與元素的tag相同者對象進行操作
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 子選擇器  -->
+      <h4>子選擇器 【>】</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div>
+  <h1>Box5</h1>
+  <p>Box4</p>
+</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+div{
+  background: peru;
+}
+div>h1{
+  color:purple;
+}
+div>p{
+  color:orange;
+}
+
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"> </iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                這裡會討論到一個觀念是父元素與子元素<br />
+                被包著的內容物稱為子元素，反之稱為父元素<br />
+                <img src="../imgs/code1.jpg" alt="" /><br />
+                此時 div 就是h1、p的父元素，反之h1、p是div的子元素<br />
+                子選擇器可以選擇特定父元素內的子元素進行操作<br />
+                像此範例就是選擇div標籤內的h1和p標籤進行操作
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 子孫選擇器  -->
+      <h4>子孫選擇器 【 】</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div>
+  <h1>Box5</h1>
+  <div>
+    <h2>Box1</h2>
+    <h3>Box2</h3>
+  </div>
+</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+div{
+  background: red;
+}
+div div{
+  background: blue;
+}
+div h3{
+  color:orange;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"> </iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                有沒有感覺越來越複雜，越來越好玩呢<br />
+                我們先來看看這次的結構是長這個樣子
+                <img src="../imgs/code2.jpg" alt="" /><br />
+                假如像剛剛那樣用子選擇器就會寫好幾層，所以就衍伸出子孫選擇器，只要是在父元素之下的所有元素都可以被選擇到，中間以空白字元隔開
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 相鄰兄弟選擇器  -->
+      <h4>相鄰兄弟選擇器 【+】</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div>
+  <h1>BOSS1</h1>
+  <p>Box1</p>
+  <p>Box2</p>
+</div>
+<div>
+  <h2>BOSS2</h2>
+  <p>Box5</p>
+  <p>Box6</p>
+  <p>Box7</p>
+</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+h1+p{
+  background: yellow;
+}
+p+p{
+  color:blue;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"> </iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                在使用選擇器的時候要知道每個結構的樣子才不會出錯唷
+                <img src="../imgs/code3.jpg" alt="" /><br />
+                現在結構越來越特殊啦~代表你越來越厲害<br />
+                兄弟選擇器顧名思義就是用在兄弟的身上，那問題來了甚麼是兄弟元素呢？<br /><br />
+                被同一個父元素包著且屬於同一層的情況下才算兄弟元素<br />
+                像 h1 和 p
+                都是屬於第一個div的子元素，然而相鄰兄弟選擇器只會影響+後面的元素，+號前面的不會被影響到哦<br /><br />
+                你一定會好奇為甚麼 p+p
+                會讓Box6和Box7同時為blue，因為以Box6來說Box5是他的兄弟，但以Box7來說他也是Box6的兄弟~~
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 全體兄弟選擇器  -->
+      <h4>全體兄弟選擇器 【~】</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div>
+  <p>Box1</p>
+  <h1>BOSS1</h1>
+  <p>Box2</p>
+</div>
+<div>
+  <h2>BOSS2</h2>
+  <p>Box5</p>
+  <h3>little boss</h3>
+  <p>Box6</p>
+  <p>Box7</p>
+</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+h1~p{
+  background: yellow;
+}
+h2~p{
+  color:blue;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"> </iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                A~B => 只要是在A之後的B標籤都會被選擇到<br />
+                像h2後面的p標籤顏色都會變成blue，但h3不會被改變
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ID選擇器 id -->
+      <h4>ID選擇器 【#】</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div id="box1">Box1</div>
+<div id="box2">Box2</div>
+<div id="box3">Box3</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  font-size:32px
+}
+#box1{
+  color:red;
+}
+#box2{
+  background: blue;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="console-iframe">
+                ID屬於識別字功能，所以必須具有唯一性質<br />
+                CSS就可以利用這點讓特定的標籤有不同的樣式<br />
+                切記id選擇器必須使用【#】為前綴
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- class選擇器 class -->
+      <h4>class選擇器 【.】</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div class="box">Box1</div>
+<div class="box">Box2</div>
+<div class="box">Box3</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  font-size:32px
+}
+.box{
+  color:red;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="console-iframe">
+                class 可以讓多個標籤做使用<br />
+                很常會將標籤選擇器、id選擇器、class選擇器記錯<br /><br />
+                標籤選擇器不需要前綴 <br />
+                id選擇器必須使用【#】為前綴<br />
+                class選擇器必須使用【.】為前綴
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./exercise.js"></script>
+  </body>
+</html>
