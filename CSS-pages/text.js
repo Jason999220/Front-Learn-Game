@@ -42,7 +42,8 @@ text.style.color = "white";
 
 // font-size
 fontSize.addEventListener("click", (event) => {
-  content.innerHTML = "<p>文字大小，預設16px</p>";
+  content.innerHTML =
+    "<p>文字大小，預設16px<br>尺寸有區分相對單位及絕對單位依照上方兩張心智圖<br>相對單位 指的是<span style='color:red'>會</span>因為某個物體改變而有所影響<br>絕對單位 指的是<span style='color:red'>不會</span>因為某個物體改變而有所影響<br>舉例來說正常情況下16px = 1rm = 1rem<br>em是按照父元素的font-size進行改變<br>rem則是按照根元素的font-size進行改變<br>而絕對單位的px簡單來說不管畫面整麼調整都會是所設定的font-size值</p>";
   if (event.target.checked) {
     // console.log(event.target.checked);
     inputFontSize.addEventListener("change", (event) => {

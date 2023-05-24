@@ -45,15 +45,17 @@
   <body>
     <nav class="nav-css">
       <a class="back" href="../index.html">BACK</a>
-      <h3>選擇器是為了讓我們方便針對不同的對象進行操作的工具</h3>
+      <h3>
+        選擇器是為了讓我們方便針對不同的對象進行操作的工具<br />可以在程式內改變字體或顏色，按run就可以看到結果囉
+      </h3>
       <!-- 各大選項標題 -->
       <div class="title-box">
         <a class="title" href="./concept.html">介紹</a>
         <a class="title" href="./selector.html">CSS選擇器</a>
+        <a class="title" href="./text.html">文字</a>
         <a class="title" href="./position.html">位置</a>
         <a class="title" href="./animation.html">特效</a>
         <a class="title" href="./layouts.html">排版</a>
-        <a class="title" href="./text.html">文字</a>
         <a class="title" href="./exercise.html">小試身手</a>
       </div>
     </nav>
@@ -196,10 +198,18 @@ div>p{
             <div class="js-title-result-block">
               <p class="js-code-result-title">content</p>
               <p class="css-content">
+                <img
+                  src="../imgs/code1.jpg"
+                  alt=""
+                  style="
+                    float: right;
+                    padding-right: 0.5rem;
+                    padding-left: 0.5rem;
+                  "
+                />
                 這裡會討論到一個觀念是父元素與子元素<br />
                 被包著的內容物稱為子元素，反之稱為父元素<br />
-                <img src="../imgs/code1.jpg" alt="" /><br />
-                此時 div 就是h1、p的父元素，反之h1、p是div的子元素<br />
+                此時div就是h1、p的父元素，反之h1、p是div的子元素<br />
                 子選擇器可以選擇特定父元素內的子元素進行操作<br />
                 像此範例就是選擇div標籤內的h1和p標籤進行操作
               </p>
@@ -255,8 +265,9 @@ div h3{
               <p class="js-code-result-title">content</p>
               <p class="css-content">
                 有沒有感覺越來越複雜，越來越好玩呢<br />
-                我們先來看看這次的結構是長這個樣子
-                <img src="../imgs/code2.jpg" alt="" /><br />
+                我們先來看看這次的結構是長這個樣子<br />
+                <img src="../imgs/code2.jpg" alt="" />
+                <br />
                 假如像剛剛那樣用子選擇器就會寫好幾層，所以就衍伸出子孫選擇器，只要是在父元素之下的所有元素都可以被選擇到，中間以空白字元隔開
               </p>
             </div>
@@ -311,8 +322,16 @@ p+p{
             <div class="js-title-result-block">
               <p class="js-code-result-title">content</p>
               <p class="css-content">
-                在使用選擇器的時候要知道每個結構的樣子才不會出錯唷
-                <img src="../imgs/code3.jpg" alt="" /><br />
+                在使用選擇器的時候要知道每個結構的樣子才不會出錯唷<br />
+                <img
+                  src="../imgs/code3.jpg"
+                  alt=""
+                  style="
+                    float: right;
+                    padding-right: 0.5rem;
+                    padding-left: 0.5rem;
+                  "
+                /><br />
                 現在結構越來越特殊啦~代表你越來越厲害<br />
                 兄弟選擇器顧名思義就是用在兄弟的身上，那問題來了甚麼是兄弟元素呢？<br /><br />
                 被同一個父元素包著且屬於同一層的情況下才算兄弟元素<br />
