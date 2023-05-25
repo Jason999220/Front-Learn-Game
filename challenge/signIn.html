@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign in effect</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box; /* 使padding、border、margin不影響主體物件大小 */
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica", "Apple LiGothic Medium", "Herr Von Muellerhoff",
+        "Microsoft JhengHei", sans-serif; /* 字形樣式 */
+      list-style: none; /* 移除列表的符號 */
+      text-decoration: none; /* 移除超連結的下底線 */
+      border: none; /* 移除初始border */
+      font-weight: 700;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #23242a;
+    }
+
+    .box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 380px;
+      height: 580px;
+      background: #1c1c1c;
+      border: 8px;
+      overflow: hidden; /* 讓超出的 animate 的 background 隱藏*/
+    }
+
+    .box::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 572px;
+      transform-origin: bottom right; /* 由右下的點當圓心 */
+      background: linear-gradient(
+        0deg,
+        transparent,
+        transparent,
+        #ff5809,
+        #ff5809,
+        #ff5809
+      );
+      animation: animate 8s linear infinite;
+    }
+
+    .box::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 572px;
+      transform-origin: bottom right; /* 由右下的點當圓心 */
+      background: linear-gradient(
+        0deg,
+        transparent,
+        transparent,
+        #ff5809,
+        #ff5809,
+        #ff5809
+      );
+      animation: animate 8s linear infinite -4s;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .border-line {
+      position: absolute;
+      top: 0;
+      inset: 0;
+    }
+
+    .border-line:before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 572px;
+      transform-origin: bottom right;
+      background: linear-gradient(
+        0deg,
+        transparent,
+        transparent,
+        #b15bff,
+        #b15bff,
+        #b15bff
+      );
+      animation: animate 8s linear infinite -2.5s;
+    }
+
+    .border-line::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 572px;
+      transform-origin: bottom right;
+      background: linear-gradient(
+        0deg,
+        transparent,
+        transparent,
+        #b15bff,
+        #b15bff,
+        #b15bff
+      );
+      animation: animate 8s linear infinite -6.5s;
+    }
+
+    form {
+      position: absolute;
+      inset: 4px;
+      background: #222;
+      padding: 50px 40px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+    }
+
+    h2 {
+      color: #fff;
+      text-align: center;
+      letter-spacing: 0.1rem;
+    }
+
+    .inputBox {
+      position: relative;
+      width: 300px;
+      margin-top: 35px;
+    }
+
+    input {
+      position: relative;
+      width: 100%;
+      padding: 20px 10px 10px;
+      background: transparent; /*  */
+      outline: none;
+      color: #23242a;
+      letter-spacing: 0.05rem;
+      transition: 0.5s; /*  */
+      z-index: 10; /*  */
+    }
+
+    .inputBox span {
+      position: absolute;
+      left: 0;
+      padding: 20px 0px 10px;
+      pointer-events: none; /* */
+      color: #8f8f8f;
+      letter-spacing: 0.05rem;
+      transition: 0.5s;
+    }
+
+    /* 假如被點擊或者有資料則觸發 */
+    input:valid ~ span,
+    input:focus ~ span {
+      color: #fff;
+      font-size: 0.75rem;
+      transform: translateY(-34px);
+    }
+
+    i {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: 0.5s;
+      pointer-events: none;
+    }
+
+    input:valid ~ i,
+    input:focus ~ i {
+      height: 44px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a {
+      margin: 10px 0;
+      font-size: 0.75rem;
+      color: #8f8f8f;
+    }
+
+    a:hover
+      /* a:nth-child(2)  */ /* 讓第二個a直接便白色 */ {
+      color: #fff;
+    }
+
+    input[type="submit"] {
+      outline: none;
+      padding: 9px 25px;
+      background: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 100px;
+      margin-top: 10px;
+    }
+
+    .or {
+      z-index: 100;
+      position: relative;
+      top: 30%;
+      width: 95%;
+      left: 3%;
+      height: 1px;
+      background: #fff;
+    }
+    .or::after {
+      content: "OR";
+      color: #fff;
+      position: absolute;
+      left: 43%;
+      transform: translate(0%, -50%);
+      padding: 0px 5px;
+      font-size: 1.5rem;
+      background: #222;
+    }
+    .other-login {
+      position: relative;
+      z-index: 2;
+      top: 32%;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .other-box {
+      height: 45px;
+      width: 290px;
+      padding: 0.5rem;
+      display: flex;
+      padding-left: 0.7rem;
+      align-items: center;
+      border-radius: 8px;
+    }
+    .facebook {
+      position: absolute;
+      font-size: 1.5rem;
+      top: 20%;
+      cursor: pointer;
+      background: rgba(0, 0, 255, 0.6);
+      color: #777;
+    }
+    .google {
+      position: absolute;
+      font-size: 1.5rem;
+      cursor: pointer;
+      top: 60%;
+      background: rgba(255, 0, 0, 0.6);
+    }
+    .facebook:hover {
+      background: rgba(0, 0, 255, 1);
+    }
+    .google:hover {
+      background: rgba(255, 0, 0, 1);
+    }
+    img {
+      width: 10%;
+      margin-right: 0.5rem;
+    }
+    .back {
+      text-decoration: none;
+      font-size: 2rem;
+      background-color: #ccccff;
+      padding: 0.5rem;
+      border-radius: 5px;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+    .back:hover {
+      font-size: 2.2rem;
+    }
+    .url {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+  <body>
+    <a href="../pages/challenge.html" class="back">Back</a>
+    <a
+      href="https://www.youtube.com/watch?v=rWQeqH526KA"
+      class="url"
+      target="_blank"
+      >Animated Login</a
+    >
+    <div class="box">
+      <span class="border-line"></span>
+      <form>
+        <h2>Sign in</h2>
+        <div class="inputBox">
+          <input type="text" required />
+          <span>Email</span>
+          <i></i>
+        </div>
+        <div class="inputBox">
+          <input type="password" required />
+          <span>Password</span>
+          <i></i>
+        </div>
+        <div class="links">
+          <a href="#">Forgot Password </a>
+          <a href="#">Signup </a>
+        </div>
+        <input type="submit" value="Login" />
+      </form>
+      <div class="or"></div>
+      <div class="other-login">
+        <a href="#" class="facebook other-box">
+          <img src="../imgs/facebook.png" alt="" />
+          <p>Login with facebook</p>
+        </a>
+        <a href="#" class="google other-box">
+          <img src="../imgs/google.png" alt="" />
+          <p>Login with google</p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

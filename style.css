@@ -446,7 +446,7 @@ textarea {
 }
 .js-console {
   margin-top: 0.5rem;
-  height: 100%;
+  height: auto;
 }
 .js-title-block {
   background: #777;

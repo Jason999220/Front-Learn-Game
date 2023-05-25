@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--begin code mirror -->
+    <!--下面两个是使用Code Mirror必须引入的-->
+    <!-- CodeMirror 核心文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.js"></script>
+    <!-- Java 代码高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/clike/clike.js"></script>
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/css/css.min.js"></script>
+    <script src="https://codemirror.net/mode/xml/xml.js"></script>
+    <script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+    <!-- 給HTML高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/xml/xml.min.js"></script>
+    <!-- Groovy 代码高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/groovy/groovy.js"></script>
+    <!-- 主题样式文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/theme/dracula.css"
+    />
+    <!-- 代码折叠支持 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/foldgutter.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/foldcode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/foldgutter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/brace-fold.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/comment-fold.js"></script>
+    <!-- 括号匹配支持 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/edit/matchbrackets.js"></script>
+    <!--end Code Mirror -->
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="../variable.html">BACK</a>
+      <div class="js-title">本網站</div>
+    </nav>
+    <div class="container" style="height: auto">
+      <div class="js-learn">
+        <!-- string -->
+        <h4>string</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+var x = "Jason" ;
+console.log( x);
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <div class="result-content">
+                  指的是用var宣告一個【x】變數，將Jason這個字串賦予給【x】，這樣以後使用【x】就可以得到Jason曪<br />
+                  <br />打印出window，那window是甚麼呢？我又沒宣告怎麼能使用呢？對這邊就要提到另一個概念【全域變數】<br />簡單來說就是無論在哪個地方都可以呼叫這個變數，用var宣告的變數也會變成全域變數，展開window物件就可以看到剛剛用var定義的myName變數
+                </div>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../components/common.js"></script>
+    <!-- <script src="../codeMirror.js"></script> -->
+  </body>
+</html>
+<!-- <div class="js-content">這裡有兩個問題點<br>1. 假如我們不將變數宣告會怎樣呢？<br>2. 宣告後的變數與全域的變數有何不同<br><br>第一個問題點就像你操作的一樣，就算不宣告還是可以賦於值給變數，但此時的myName變數並不能說是全域變數，嚴格來說稱為window物件下的一個屬性。</div> -->

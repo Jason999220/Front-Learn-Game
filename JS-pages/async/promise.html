@@ -10,79 +10,36 @@
   <body>
     <nav>
       <a class="back" href="../async.html">BACK</a>
-      <div class="js-nav-title">promise</div>
+      <h3>
+        為了解決同步/非同步的問題，自從ES6開始新增了一個叫做 Promise 的特殊物件
+      </h3>
+      <div class="js-title"></div>
     </nav>
-    <div class="container" style="height: auto; flex-direction: column">
-      <!-- callback -->
-      <h4>callback</h4>
-      <div class="js-box" style="width: 100%">
-        <div class="code">
-          <div class="html-block">
-            <div class="js-title-block">
-              <div class="js-code-title">HTML</div>
-              <textarea class="html-code">
-<h1 onclick="alert('@')">HTML</h1></textarea
-              >
-            </div>
-          </div>
-          <div class="resize"></div>
+    <div class="container" style="height: auto">
+      <div class="js-learn" style="width: 100%">
+        <!-- Promise -->
+        <h4>Promise</h4>
+        <div class="js-box-2">
           <div class="js-block">
             <div class="js-title-block">
               <div class="js-code-title">JS</div>
-              <textarea class="js-code">console.log("false");</textarea>
-            </div>
-          </div>
-        </div>
-        <div class="resize"></div>
-        <div class="js-result">
-          <div class="js-show">
-            <div class="js-title-result-block">
-              <div class="js-code-result-title">Result</div>
-              <div class="js-code-result-run">run</div>
-              <iframe class="result-iframe"></iframe>
-            </div>
-          </div>
-          <div class="js-console">
-            <div class="js-title-result-block">
-              <p class="js-code-result-title">console</p>
-              <iframe class="console-iframe"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- promise -->
-      <h4>promise</h4>
-      <div class="js-box" style="width: 100%">
-        <div class="code">
-          <div class="html-block">
-            <div class="js-title-block">
-              <div class="js-code-title">HTML</div>
-              <textarea class="html-code">
-<h1 onclick="alert('@')">HTML</h1></textarea
-              >
+              <textarea class="js-code"> </textarea>
             </div>
           </div>
           <div class="resize"></div>
-          <div class="js-block">
-            <div class="js-title-block">
-              <div class="js-code-title">JS</div>
-              <textarea class="js-code">console.log("false");</textarea>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <div class="result-content"></div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="resize"></div>
-        <div class="js-result">
-          <div class="js-show">
-            <div class="js-title-result-block">
-              <div class="js-code-result-title">Result</div>
-              <div class="js-code-result-run">run</div>
-              <iframe class="result-iframe"></iframe>
-            </div>
-          </div>
-          <div class="js-console">
-            <div class="js-title-result-block">
-              <p class="js-code-result-title">console</p>
-              <iframe class="console-iframe"></iframe>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
             </div>
           </div>
         </div>

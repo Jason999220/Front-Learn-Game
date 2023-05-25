@@ -14,25 +14,23 @@
     </nav>
     <div class="container" style="height: auto">
       <div class="js-learn" style="width: 100%">
-        <!-- callback -->
-        <h4>Callback</h4>
+        <!-- Synchronize -->
+        <h4>Synchronize</h4>
         <div class="js-box-2">
           <div class="js-block">
             <div class="js-title-block">
               <div class="js-code-title">JS</div>
               <textarea class="js-code">
-function callFirst(text,callback){
-  window.setTimeout ( ()=>{
-    console.log('First')
-    console.log(text)
-    callback()
-  }, 1000);
+function callFirst(){
+  console.log('First')
 }
 function callThird(){
   console.log('Third')
 }
 
-callFirst('Second',callThird)
+callFirst()
+console.log('Second')
+callThird()
               </textarea>
             </div>
           </div>
@@ -43,8 +41,7 @@ callFirst('Second',callThird)
                 <div class="js-code-result-title">Result</div>
                 <div class="js-code-result-run">run</div>
                 <div class="result-content">
-                  callback是指在一個函式內呼叫其他函式，像此時我們將【callThird】當成參數傳遞給【callFirst】，在【callFirst】內呼叫了【callThird】使結果按照順序呈現
-                  <br />這就是最原始解決Asynchronize問題的方法，利用傳入function來取得資料
+                  這裡的同步並非同時進行的意思，而是只能等前一個使用者用完才換下一位的概念
                 </div>
               </div>
             </div>
@@ -56,29 +53,24 @@ callFirst('Second',callThird)
             </div>
           </div>
         </div>
-        <!-- callback Hell -->
-        <h4>Callback Hell</h4>
+        <!-- Asynchronize -->
+        <h4>Asynchronize</h4>
         <div class="js-box-2">
           <div class="js-block">
             <div class="js-title-block">
               <div class="js-code-title">JS</div>
               <textarea class="js-code">
-function callFirst(callback){
-  window.setTimeout ( ()=>{
+function callFirst(){
+  window.setTimeout ( function callback(){
     console.log('First')
-    callback(
-      callThird()
-    )
-  }, 1000);
-}
-function callSecond(){
-  console.log('Second')
-}
+  }, 1000);}
 function callThird(){
   console.log('Third')
 }
 
-callFirst(callSecond)
+callFirst()
+console.log('Second')
+callThird()
               </textarea>
             </div>
           </div>
@@ -89,11 +81,8 @@ callFirst(callSecond)
                 <div class="js-code-result-title">Result</div>
                 <div class="js-code-result-run">run</div>
                 <div class="result-content">
-                  假如連 Second 也用函式的方式呈現呢？就會變成這個奇怪的樣子<br />
-                  而現在的程式這麼短已經很奇怪了，如果程式有很多不就非常恐怖，所以callback用太多會產生
-                  Callback Hell 就會變成下方圖片的樣子<br />為了解決這個大問題就衍伸了
-                  Promise ，那 Promise
-                  到底是甚麼呢？他又給我們帶來甚麼好處？我們下個章節再來討論吧
+                  setTimeout(要執行的函式, 等待毫秒數) 只會執行一次<br />
+                  如果想要重複執行可以使用setTimeInterval<br />非同步就像泡澡<br />在按run之前可以先想想看結果會是甚麼
                 </div>
               </div>
             </div>
@@ -105,7 +94,34 @@ callFirst(callSecond)
             </div>
           </div>
         </div>
-        <img src="../../imgs/callback.png" alt="" style="margin-left: 25%" />
+        <h4>callback</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code"> </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <div class="result-content">
+                  如果像上面那個範例存在著非同步的情況，但我們又想讓它的結果是按照順序，就會利用一個叫
+                  callback 的技巧<br />這個技巧我們下一章節再與各位討論，各位可以先思考看看~~
+                </div>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="../components/common.js"></script>
