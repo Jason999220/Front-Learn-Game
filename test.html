@@ -14,24 +14,29 @@
     <meta name="author" content="Jason" />
     <!-- 搜索作者名稱 -->
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/javascript/javascript.min.js"></script>
   </head>
   <body>
-    <textarea id="codeTextarea"></textarea>
+    <div id="box1">Box1</div>
+    <div class="box">Box2</div>
+    <span>span</span>
+    <p class="myP">Hello</p>
+    <p class="myP">World</p>
     <script>
-      var codeTextarea = document.getElementById("codeTextarea");
-
-      var editor = CodeMirror.fromTextArea(codeTextarea, {
-        mode: "xml",
-        theme: "default",
-        lineNumbers: true,
-        autoCloseTags: true, // 自动闭合标签
-        // 更多设置...
+      const box1 = document.getElementById("box1");
+      const box = document.getElementsByClassName("box");
+      const span = document.querySelector("span");
+      const p = document.querySelectorAll(".myP");
+      box1.addEventListener("click", (event) => {
+        console.log(event.target.innerText);
+      });
+      box[0].addEventListener("click", (event) => {
+        console.log(event.target.innerText);
+      });
+      span.addEventListener("click", (event) => {
+        console.log(event.target.innerText);
+      });
+      p[1].addEventListener("click", (event) => {
+        console.log(event.target.innerText);
       });
     </script>
   </body>

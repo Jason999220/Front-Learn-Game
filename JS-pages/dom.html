@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="../pages/javascript.html">BACK</a>
+      <div class="js-nav-title">
+        終於進到最重要的DOM，想要網頁更多的靈魂就必須操控DOM，那什麼是DOM呢？又要怎麼操作呢？就讓我們繼續看下去
+      </div>
+    </nav>
+    <div class="container" style="height: auto; flex-direction: column">
+      <!-- get dom -->
+      <h4>get dom</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div id="box1">Box1</div>
+<div class="box">Box2</div>
+<span>span</span>
+<p class="myP">Hello</p>
+<p class="myP">World</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+const box1 = document.getElementById('box1')
+const box = document.getElementsByClassName('box')
+const span = document.querySelector('span')
+const p = document.querySelectorAll('.myP')
+box1.addEventListener("click", (event) => {
+    alert(event.target.innerText);
+});
+box[0].addEventListener("click", (event) => {
+    alert(event.target.innerText);
+});
+span.addEventListener("click", (event) => {
+    alert(event.target.innerText);
+});
+p[0].addEventListener("click", (event) => {
+    alert(event.target.innerText);
+});
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                要使用DOM就必須先取得DOM，取得DOM的方式有很多種，這邊先介紹常用的幾種方式<br />
+                getElementById() => 利用【id】<br />
+                getElementsByClassName() => 利用【class name】<br />
+                getElementsByTagName() => 利用【tag name】<br />
+                <br />
+                接下來這兩個很常用到但常常被誤解
+                <br />
+                querySelector() => 只會回傳第一個符合的DOM<br />
+                querySelectorAll() => 會回傳一個 【NodeList】<br />
+                至於甚麼是
+                【NodeList】我們在【陣列】已經提過這邊簡單帶過，是一種由DOM產生的偽陣列，只能使用for迭代取值
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- use dom -->
+      <h4>use dom</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div id="box1">Box1</div>
+<div id="box2">Box2</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+const box1 = document.getElementById('box1')
+const box2 = document.getElementById('box2')
+
+// 第一種，綁定處理函式
+function sayHi (){
+alert('Hey')
+}
+box1.addEventListener('click',sayHi)
+
+// 第二種 arror funtion
+box2.addEventListener('click', ()=>{
+alert('Hey')
+})
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                取得DOM後那就來介紹基本文法囉<br />
+                xxx.addEventListener(event type, callback)
+                <br /><br />
+                xxx => 要監聽的DOM<br />
+                event type => 觸發事件的形式<br />
+                callback => 要觸發的函式<br /><br />
+                有想過一個DOM可以有多個觸發事件嗎？<br />亦或者同時有多個不同函式？
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- event type -->
+      <h4>event type</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div id="box1">Box1</div>
+<div id="box2">Box2</div>
+<input id="input" placeholder="message ... "/>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+const box1 = document.getElementById('box1')
+const box2 = document.getElementById('box2')
+const input = document.getElementById('input')
+box1.addEventListener('click', ()=>{
+alert('HELLO');
+})
+box2.addEventListener('mouseover', ()=>{
+box2.innerText = "A";
+})
+box2.addEventListener('mouseout', ()=>{
+box2.innerHTML = "B";
+})
+input.addEventListener('focus', ()=>{
+input.style["background"] = "red";
+})
+input.addEventListener('blur', ()=>{
+input.style["background"] = "peru";
+})
+input.addEventListener('keyup', (event)=>{
+box1.innerText =`按下的是 : ${event.key}` ;
+})
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                取到DOM之後就是要來看有什麼event type可以使用， 一樣有許多event
+                type，我們這邊就介紹幾個比較常用的<br />
+                click => 點擊時觸發 <br />
+                mouseover => 鼠標移入時觸發 <br />
+                mouseout => 鼠標移出時觸發 <br />
+                focus => 獲得焦點時觸發 <br />
+                blur => 失去焦點時觸發 <br />
+                keyup => 點擊鍵盤時觸發 <br /><br />
+                看完是不是覺得有點熟悉呢？有沒有覺得跟CSS的效果很像，雖然很像但JS可以做到更複雜且動態及互動性更好的效果
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- add style -->
+      <h4>add style</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+  <div id="box1">Box1</div>
+  <div id="box2">Box2</div>
+  <div id="box3">Box3</div>
+  <div id="box4">Box4</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+  const box1 = document.getElementById('box1')
+  const box2 = document.getElementById('box2')
+  const box3 = document.getElementById('box3')
+  const box4 = document.getElementById('box4')
+
+  box1.addEventListener('click', ()=>{
+    box1.style["font-size"] = "20px";
+  })
+  box2.addEventListener('click', ()=>{
+    box2.style.color = "purple";
+  })
+  box3.addEventListener('click', ()=>{
+    box3.style.setProperty("background", "peru");
+  })
+  box4.addEventListener('click', ()=>{
+    box4.style = "background:red"
+  })
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                這邊介紹幾種可以利用JS動態加入CSS的方法<br />
+                1. xxx.style["font-size"] = "20px"; <br />
+                2. xxx.style.fontSize = "20px"; <br />
+                3. xxx.style.setProperty("font-size", "20px"); <br />
+                4. xxx.style = "font-size:20px" <br />
+                這邊統一用【font-size】示範了解哪些需要駝峰式命名<br /><br />
+                但為甚麼需要這麼多種呢？有什麼差異嗎？<br />
+                如果我混搭又會發生什麼問題呢？
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./components/document.js"></script>
+  </body>
+</html>

@@ -1,35 +1,20 @@
 // 給需要HTML的區塊使用
 const jsResult = document.querySelectorAll(".js-result");
-const jsResultText = document.querySelectorAll(".js-result-text");
+// const jsResultText = document.querySelectorAll(".js-result-text");
 const jsCodeRun = document.querySelectorAll(".js-code-result-run");
-const handleOutput = document.querySelectorAll(".js-output");
+// const handleOutput = document.querySelectorAll(".js-output");
 const htmlCode = document.querySelectorAll(".html-code");
 const jsCode = document.querySelectorAll(".js-code");
-const resultIframe = document.querySelectorAll(".result-iframe");
-const consoleIframe = document.querySelectorAll(".console-iframe");
+const resultIframe = document.querySelectorAll(".css-result-iframe");
 
 // 第三版
 for (let i = 0; i < jsCodeRun.length; i++) {
   jsCodeRun[i].addEventListener("click", () => {
-    consoleIframe[i].contentDocument.body.innerHTML = ""; // reset
     resultIframe[i].contentDocument.body.innerHTML = ""; // reset
-    resultIframe[i].contentDocument.body.innerHTML = htmlCode[i].value; // save HTML code
+    resultIframe[i].contentDocument.body.innerHTML =
+      htmlCode[i].value +
+      `<style>*{margin:0;font-size:1.5rem;margin-bottom:.5rem}</style>`; // save HTML code
     resultIframe[i].contentWindow.eval(jsCode[i].value); //  save JS code
-    try {
-      // 其餘參數 ...args => 不確定參數會有f幾個的情況
-      console.log = (msg, ...args) => {
-        consoleIframe[
-          i
-        ].contentDocument.body.innerHTML += ` <p style="border-bottom: 1px solid #fff;  font-size: 1.3rem;padding-bottom: 0.5rem">
-            ${msg} ${args}
-          </p>`; // 在<iframe>中顯示结果
-      };
-      eval(jsCode[i].value); // 執行當前JS代碼
-    } catch (error) {
-      alert(error);
-      console.log(error); // 在<iframe>中顯示錯誤
-      consoleIframe[i].contentDocument.body.innerHTML = error;
-    }
   });
 }
 

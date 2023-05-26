@@ -415,13 +415,18 @@ textarea {
   position: relative;
 }
 .css-content-block {
-  height: calc(500px - 210px);
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
   margin-top: 0.5rem;
 }
 .css-content {
-  height: 85%;
+  height: calc(100% - 38px);
   padding: 1rem 0 1rem 1.3rem;
   overflow-y: auto;
+  background: rgb(119, 119, 119);
+  color: #000;
 }
 .console-iframe {
   background: #777;
@@ -443,6 +448,11 @@ textarea {
   height: 100%;
   /* margin-right: 0.5rem; */
   /* overflow-y: auto; */
+}
+.js-show {
+  position: absolute;
+  height: 48%;
+  width: 100%;
 }
 .js-console {
   margin-top: 0.5rem;
@@ -498,6 +508,7 @@ textarea {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
+  position: relative;
 }
 .result-content {
   width: 100%;
