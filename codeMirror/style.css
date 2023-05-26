@@ -1,0 +1,4 @@
+/* 主题樣式文件  */
+@import url("https://cdn.jsdelivr.net/npm/codemirror@5.31.0/theme/dracula.css");
+/* 代碼折叠支持 */
+@import url("https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/foldgutter.css");

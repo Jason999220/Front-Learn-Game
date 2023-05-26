@@ -18,6 +18,7 @@
         <a class="title" href="./position.html">位置</a>
         <a class="title" href="./animation.html">特效</a>
         <a class="title" href="./layouts.html">排版</a>
+        <a class="title" href="./pseudo.html">偽類/元素</a>
         <a class="title" href="./exercise.html">小試身手</a>
       </div>
     </nav>
@@ -77,20 +78,27 @@
           />
         </p>
         <!-- animation -->
-        <p class="course">
+        <div class="course">
           <input type="radio" name="option" id="animation" />
           <label for="animation">animation:</label>
           <input type="text" value="name 2s infinite" id="input-animation" />
           <!-- 放 @keyframe -->
           <div for="animation" id="keyframes-box">
             <!-- 標題 -->
-            <div id="keyframesNameDiv"> <input type="text" value="name" id="keyframesName" placeholder="請輸入動畫名稱"></input></div>
+            <div id="keyframesNameDiv">
+              <input
+                type="text"
+                value="name"
+                id="keyframesName"
+                placeholder="請輸入動畫名稱"
+              />
+            </div>
             <!-- 執行碼 -->
             <div id="keyframes-code">
-              <input value="{from{left:0px} to{left:200px}}" type="text">
+              <input value="{from{left:0px} to{left:200px}}" type="text" />
             </div>
           </div>
-        </p>
+        </div>
       </aside>
       <div class="right">
         <!-- 結果區 -->

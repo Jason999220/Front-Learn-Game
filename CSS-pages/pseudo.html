@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--begin code mirror -->
+    <!-- 以下兩個是 CodeMirror 核心文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.js"></script>
+    <!-- 代碼高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/clike/clike.js"></script>
+    <!-- html 代码高亮 -->
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- CSS 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/css/css.min.js"></script>
+    <!-- JS 代码高亮 -->
+    <script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+    <!-- xml 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/xml/xml.min.js"></script>
+    <!-- Groovy 高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/groovy/groovy.js"></script>
+    <!-- 主题樣式文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/theme/dracula.css"
+    />
+    <!-- 代碼折叠支持 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/foldgutter.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/foldcode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/foldgutter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/brace-fold.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/comment-fold.js"></script>
+    <!-- 括號匹配支持 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/edit/matchbrackets.js"></script>
+    <!--end Code Mirror -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav class="nav-css">
+      <a class="back" href="../index.html">BACK</a>
+      <h3>讓元素處在特定條件時套用指定的 CSS 效果</h3>
+      <!-- 各大選項標題 -->
+      <div class="title-box">
+        <a class="title" href="./concept.html">介紹</a>
+        <a class="title" href="./selector.html">CSS選擇器</a>
+        <a class="title" href="./text.html">文字</a>
+        <a class="title" href="./position.html">位置</a>
+        <a class="title" href="./animation.html">特效</a>
+        <a class="title" href="./layouts.html">排版</a>
+        <a class="title" href="./pseudo.html">偽類/元素</a>
+        <a class="title" href="./exercise.html">小試身手</a>
+      </div>
+    </nav>
+    <div class="container" style="height: auto; flex-direction: column">
+      <!-- Pesudo class -->
+      <!-- hover -->
+      <h4>hover</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div id="box1">Box1</div>
+<div id="box2">Box2</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  font-size:24px;
+  margin-bottom:.5rem;
+}
+#box1:hover{
+  color:red;
+  background:blue;
+}
+#box2:hover{
+  color:white;
+  background:black;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">碰到的時候就會觸發</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- active -->
+      <h4>active</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+  <button id="btn1">Button1</button>
+  <button id="btn2">Button2</button>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  font-size:24px;
+  margin-bottom:.5rem;
+}
+#btn1:active{
+  color:red;
+  background:blue;
+}
+#btn2:active{
+  color:white;
+  background:black;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">按下去的時候才會觸發</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- focus -->
+      <h4>focus</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<input placeholder="No focus">
+<input placeholder="focus" id="change">
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  font-size:24px;
+  margin-bottom:.5rem;
+}
+#change:focus{
+  color:white;
+  background:black;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                也是在按下去的時候才會觸發，但目標不在身上時就會移除效果
+                ，通常用於 input 標籤
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- nth-child(n) -->
+      <h4>nth-child()</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div>
+  <p>One</p>
+  <p>Two</p>
+  <p>Three</p>
+  <p>Four</p>
+</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  font-size:24px;
+  margin:0;
+  margin-bottom:.5rem;
+}
+div p:nth-child(1){
+  color:blue;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                特定父元素中的同層元素<br />可以直接指定數字 : 1,2,5 ....<br />可以嘗試看看用倍數會發生甚麼情況
+                : n,2n,3n-1 ....<br />大部分的偽類支援odd、even的這兩個參數
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- nth-of-type()  -->
+      <h4>nth-of-type()</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div>
+  <section>
+    <p>One</p>
+    <p>Two</p>
+    <p>Three</p>
+  </section>
+  <section>
+    <p>Four</p>
+    <p>Five</p>
+    <p>Six</p>
+  </section>
+  <section>
+    <p>Seven</p>
+    <p>Eight</p>
+    <p>Nine</p>
+  </section>
+</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  font-size:24px;
+  margin:0;
+  margin-bottom:.5rem;
+}
+div{
+  display:grid;
+  grid-template-columns:repeat(3,1fr)
+}
+div section:nth-of-type(2) {
+  color:blue;
+}
+div p:nth-of-type(3) {
+  color:red;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                這個跟上一個nth-child(n)的用法差不多<br />但會按照且同類型且同一層的進行匹配<br />
+                你覺得 Six 應該是甚麼顏色呢？<br />那為甚麼最後結果是那樣呢？
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pesudo element -->
+      <!-- before & after -->
+      <h4>before & after</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div id="box1">Box1</div>
+<div id="box2">Box2</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  color:white;
+  font-size:24px;
+  margin-bottom:.5rem;
+}
+#box1::before{
+  content:'I am ';
+  color:red;
+}
+#box2::after{
+  content:' is me ';
+  color:blue;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                before => 在元素前面增添東東<br />
+                after => 在元素後面增添東東 <br />
+                但一定需要有 【content】這個屬性，就算不用也要放空字串 【content
+                : ' '】
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- first-letter -->
+      <h4>first-letter</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+ <div id="box1">Box1</div>
+ <div id="box2">Box2</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  color:white;
+  font-size:24px;
+  margin-bottom:.5rem;
+}
+#box1::first-letter{
+  font-size:20px;
+  color:red;
+}
+#box2::first-letter{
+  font-size:60px;
+  color:blue;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">改變該元素的第一個字母</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 練習  -->
+      <h4>玩玩看</h4>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div class="box">
+  <span>A</span>
+  <div>B</div>
+  <div>C</div>
+  <div>D</div>
+  <div>E</div>
+  <div>F</div>
+</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  font-size:24px;
+  margin:0;
+  margin-bottom:.5rem;
+}
+.box div:nth-child(2){
+  background-color:#FC3;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                在看答案前可以先想想看哦，如果跟預想得不一樣那該怎麼調整呢？
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="css-box">
+        <div class="html-block">
+          <div class="js-title-block">
+            <div class="js-code-title">HTML</div>
+            <textarea class="html-code">
+<div id="container">
+  <div id="box1">
+    <div>A</div>
+    <span>B</span>
+    <div class="qq">QQ</div>
+  </div>
+  <div id="box2">
+    <div class="qq">QQ</div>
+    <span>C</span>
+  </div>
+</div>
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="css-block">
+          <div class="js-title-block">
+            <div class="js-code-title">CSS</div>
+            <textarea class="css-code">
+*{
+  font-size:24px;
+  margin:0;
+  margin-bottom:.5rem;
+}
+#box1 div:nth-of-type(1){
+  color:blue;
+}
+#box2:hover::after{
+  content:'HELLO';
+  color:red;
+}
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <iframe class="css-result-iframe"></iframe>
+            </div>
+          </div>
+          <div class="css-content-block">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">content</p>
+              <p class="css-content">
+                有想過 pseudo element、pseudo element 混搭嗎？<br />
+                沒想到吧 ~~ 竟然還可以混搭，但也不是每種形式都可以搭配<br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./exercise.js"></script>
+  </body>
+</html>

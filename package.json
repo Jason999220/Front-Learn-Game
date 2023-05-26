@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "init": "^0.1.2"
+  },
+  "name": "front-learn-game",
+  "description": "利用點擊圖片或區塊顯示效果，使用者可自行調整參數，藉由圖形實際演練而熟悉語法",
+  "version": "1.0.0",
+  "main": "regex.js",
+  "devDependencies": {
+    "webpack": "^5.84.0",
+    "webpack-cli": "^5.1.1"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jason999220/Front-Learn-Game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jason999220/Front-Learn-Game/issues"
+  },
+  "homepage": "https://github.com/Jason999220/Front-Learn-Game#readme"
+}
