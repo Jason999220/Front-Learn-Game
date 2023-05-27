@@ -333,6 +333,7 @@ nav {
 /* JS 教學區塊 */
 .js-learn {
   margin: 1rem 0;
+  width: 100%;
 }
 .course-js {
   margin: 1rem;
@@ -403,14 +404,12 @@ textarea {
   overflow-x: scroll;
   background: #777;
   width: 100%;
-  word-wrap: break-word;
   height: 256.5px;
 }
 .css-result-iframe {
   overflow-x: scroll;
   background: #777;
   width: 100%;
-  word-wrap: break-word;
   height: calc(100% - 38px);
   position: relative;
 }
@@ -455,8 +454,11 @@ textarea {
   width: 100%;
 }
 .js-console {
+  height: 50%;
+  width: 100%;
   margin-top: 0.5rem;
-  height: auto;
+  position: absolute;
+  bottom: 0;
 }
 .js-title-block {
   background: #777;
@@ -570,7 +572,7 @@ textarea {
   opacity: 0;
   color: red;
 }
-#dom-url {
+.img-url {
   margin-top: 0.5rem;
   margin-left: 11%;
 }

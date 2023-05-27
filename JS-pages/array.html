@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="../pages/javascript.html">BACK</a>
+      <div class="js-nav-title">Array</div>
+    </nav>
+    <div class="container" style="height: auto; flex-direction: column">
+      <!-- 基本語法 -->
+      <h4>基本語法</h4>
+      <div class="js-box-2">
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+let arr = [] ;
+let numberArr = [1,2,3,4] ;
+let strArr = ['Joy','Lisa','apple'] ;
+console.log(arr) ;
+console.log(numberArr) ;
+console.log(strArr) ;
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <p class="css-content">
+                陣列就是用一對中括號將資料包起來，資料可以是數字、字串、boolean等，也可以是空字串，進階的就可以在陣列裡包著陣列，使其變的更複雜。
+                <br />目前用陣列及物件儲存資料已經是很普遍的，物件是甚麼稍後會在說明，
+              </p>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 新增資料 -->
+      <h4>新增資料</h4>
+      <div class="js-box-2">
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+let num = [1,2,3]
+let data = [4,5]
+let reuslt = num.push(data)
+console.log(reuslt)
+console.log(num)
+
+let str = ['A','B','C']
+let data1 = ['D','E']
+let reuslt2 = str.concat(data1)
+console.log(reuslt2)
+console.log(str)
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <p class="css-content">
+                為什麼要新增資料呢？因為我們不可能一開始就把資料寫死，所以才會有新增資料的方法。<br />
+                網路上有許多方法，這邊就提幾個比較常用的。<br />
+                1. push => 從後面新增，會回傳更新後長度。<br />
+                2. unshift => 從前面新增，會回傳更新後長度。<br />
+                3. concat => 從後面新增，會回傳更新後陣列，保留原始陣列。 <br />
+                4. Spread Operator =>
+                會回傳更新後陣列，這個比較特殊下一篇會好好講解。 <br /><br />
+                可以嘗試在左側練習每個不同的方法，了解其中的差異，一定有特殊用途才會衍伸出這麼多種方法。
+              </p>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spread Operator -->
+      <h4>Spread Operator & Rest Operator</h4>
+      <div class="js-box-2">
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+// 字串分離
+let str = 'Jason'
+let strArr = [ ...str ]
+console.log(strArr);
+
+// 合併陣列
+let arr = [1,2,3]
+let data = [4,5]
+let newArr = [...arr, ...data]
+console.log(newArr)
+
+// 解構賦值
+let [ x , ...y ] = newArr
+console.log(x)
+console.log(y)
+
+// 函式參數
+function add( a , ...b ){
+  console.log( 'a = ', a)
+  console.log( 'b = ', b)
+}
+add(1,2,3)
+
+// 淺拷貝
+let arr2 = [ ...arr ]
+console.log(arr === arr2)
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <p class="css-content">
+                【...】
+                是一個極其強大的功能，展開陣列取得陣列內的資料，或合併陣列等功能。<br />
+                這裡會統一講述 Spread Operator & Rest Operator
+                其實兩者都是以【...】當語法。<br /><br />
+                Spread Operator => 展開運算子
+                ，簡而言之就像左側的字串分離、合併陣列，將其內容物展開。<br />
+                Rest Operator => 其餘運算子
+                ，簡而言之就像左側的結構賦值、函式參數，取得其餘內容物<br /><br />
+                淺拷貝是拷貝的某一種方式，這個比較複雜會在稍後說明。<br />
+                有想過還能調換位置嗎？如果變成 let [ ...x ,y ] = newArr
+                的話結果是什麼呢？<br />
+              </p>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 刪除資料 -->
+      <h4>刪除資料</h4>
+      <div class="js-box-2">
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+let colors = ["red", "blue", "grey"];
+let color = colors.pop();
+console.log(color);
+console.log(colors);
+
+let num = [1,2,3,4,5];
+let newNum = num.filter( (item) => {
+  return item !== 3
+});
+console.log(newNum);
+console.log(num);
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <p class="css-content">
+                一樣網路上有許多方法，這邊就提幾個比較常用的。<br />
+                1. pop => 從後面移除，會回傳移除的資料，並更新原始陣列。<br />
+                2. shift => 從前面移除，會回傳移除的資料，並更新原始陣列。<br />
+                3. filter => 用函式判斷，會回傳符合條件的資料，保留原始陣列。
+              </p>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- splice -->
+      <h4>splice</h4>
+      <div class="js-box-2">
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+let num = [1,2,3];
+let other = [4,5]
+
+// remove
+let resultRemove = num.splice(2,2)
+console.log(resultRemove);
+console.log(num);
+
+// add
+let resultAdd = num.splice(0,0,other)
+console.log(resultAdd);
+console.log(num);
+
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <p class="css-content">
+                是一個很特殊的用法，既可新增也可刪除，覺得複雜的話可以參考以下圖片。<br />
+                splice(start)<br />
+                splice(start, deleteCount)<br />
+                array.splice(start, deleteCount, item1, item2, ...)<br /><br />
+                start 增加/刪除項目的位置，負數代表從後方算起。<br />
+                deleteCount 刪除的個數，如為0則不會刪除。<br />
+                item… 添加的新項目。<br />
+              </p>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="../imgs/splice.png"
+        alt=""
+        style="width: 1000px; height: 500px; margin: 0 auto"
+      />
+      <span class="img-url">
+        <a
+          href="https://ithelp.ithome.com.tw/articles/10225345"
+          target="_blank"
+          style="color: #000"
+          >圖片來源：iThome 鐵人賽的 tsuifei</a
+        >
+      </span>
+
+      <!-- NodeList -->
+      <h4>NodeList</h4>
+      <div class="js-box-2">
+        <div class="js-block">
+          <div class="js-title-block">
+            <div class="js-code-title">JS</div>
+            <textarea class="js-code">
+const array = Array.prototype.slice.call(nodeList);
+const array = Array.from(nodeList);
+            </textarea>
+          </div>
+        </div>
+        <div class="resize"></div>
+        <div class="js-result">
+          <div class="js-show">
+            <div class="js-title-result-block">
+              <div class="js-code-result-title">Result</div>
+              <div class="js-code-result-run">run</div>
+              <p class="css-content">
+                不像陣列那樣可以使用【forEach】【map】【reduce】，但可以使用【for】訪問NodeList中的元素<br />亦或者可以將其轉為真正的陣列，使用【Array.from】or【Array.prtotype.slice.call】<br />
+                講那麼多那 NodeList 到底是什麼？<br />
+                是JavaScript中表示一组
+                DOM元素的對象，類似於陣列，但不是真正的陣列。<br />在使用【getElementsByTagName】【getElementsByClassName】【querySelectorAll】以上這幾種方式會回傳一個NodeList，然後又有分靜態和動態。。。詳細請點下方鏈結<br /><br />
+                <a
+                  href="https://blog.csdn.net/Tracy_frog/article/details/79539201"
+                  target="_blank"
+                  style="color: #000"
+                  >想了解更多請參考這裡</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="js-console">
+            <div class="js-title-result-block">
+              <p class="js-code-result-title">console</p>
+              <iframe class="console-iframe"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./components/common.js"></script>
+  </body>
+</html>

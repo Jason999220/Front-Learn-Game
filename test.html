@@ -22,22 +22,10 @@
     <p class="myP">Hello</p>
     <p class="myP">World</p>
     <script>
-      const box1 = document.getElementById("box1");
-      const box = document.getElementsByClassName("box");
-      const span = document.querySelector("span");
-      const p = document.querySelectorAll(".myP");
-      box1.addEventListener("click", (event) => {
-        console.log(event.target.innerText);
-      });
-      box[0].addEventListener("click", (event) => {
-        console.log(event.target.innerText);
-      });
-      span.addEventListener("click", (event) => {
-        console.log(event.target.innerText);
-      });
-      p[1].addEventListener("click", (event) => {
-        console.log(event.target.innerText);
-      });
+      let colors = ["red", "blue", "grey"];
+      let color = colors.pop();
+      console.log(colors);
+      console.log(color);
     </script>
   </body>
 </html>
