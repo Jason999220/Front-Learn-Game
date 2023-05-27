@@ -9,30 +9,23 @@
   </head>
   <body>
     <nav>
-      <a class="back" href="../async.html">BACK</a>
-      <div class="js-title"></div>
+      <a class="back" href="../copy.html">BACK</a>
+      <h3>完全複製一份，不會共用記憶體</h3>
     </nav>
     <div class="container" style="height: auto">
       <div class="js-learn" style="width: 100%">
-        <!-- callback -->
-        <h4>Callback</h4>
+        <!-- JSON -->
+        <h4>JSON.parse & JSON.stringify</h4>
         <div class="js-box-2">
           <div class="js-block">
             <div class="js-title-block">
               <div class="js-code-title">JS</div>
               <textarea class="js-code">
-function callFirst(text,callback){
-  window.setTimeout ( ()=>{
-    console.log('First')
-    console.log(text)
-    callback()
-  }, 1000);
-}
-function callThird(){
-  console.log('Third')
-}
-
-callFirst('Second',callThird)
+let obj1 = {a: {a: 1}}
+let obj2 = JSON.parse(JSON.stringify(obj1))
+obj1.a.a = 2
+console.log(obj2 == obj1)
+console.log(obj2.a == obj1.a)
               </textarea>
             </div>
           </div>
@@ -40,12 +33,11 @@ callFirst('Second',callThird)
           <div class="js-result">
             <div class="js-show">
               <div class="js-title-result-block">
-                <div class="js-code-result-title">content</div>
+                <div class="js-code-result-title">Content</div>
                 <div class="js-code-result-run">run</div>
-                <div class="css-content">
-                  callback是指在一個函式內呼叫其他函式，像此時我們將【callThird】當成參數傳遞給【callFirst】，在【callFirst】內呼叫了【callThird】使結果按照順序呈現
-                  <br />這就是最原始解決Asynchronize問題的方法，利用傳入function來取得資料
-                </div>
+                <p class="css-content">
+                  將物件轉成字串再轉成物件，這樣就真的可以確保出來的會是一個新的物件而且是使用不同的記憶體。
+                </p>
               </div>
             </div>
             <div class="js-console">
@@ -56,29 +48,19 @@ callFirst('Second',callThird)
             </div>
           </div>
         </div>
-        <!-- callback Hell -->
-        <h4>Callback Hell</h4>
+
+        <!-- lodash 中的 【_.cloneDeep】 -->
+        <h4>_.cloneDeep</h4>
         <div class="js-box-2">
           <div class="js-block">
             <div class="js-title-block">
               <div class="js-code-title">JS</div>
               <textarea class="js-code">
-function callFirst(callback){
-  window.setTimeout ( ()=>{
-    console.log('First')
-    callback(
-      callThird()
-    )
-  }, 1000);
-}
-function callSecond(){
-  console.log('Second')
-}
-function callThird(){
-  console.log('Third')
-}
-
-callFirst(callSecond)
+let obj1 = {a: {a: 1}}
+let obj2 = JSON.parse(JSON.stringify(obj1))
+obj1.a.a = 2
+console.log(obj2 == obj1)
+console.log(obj2.a == obj1.a)
               </textarea>
             </div>
           </div>
@@ -86,15 +68,9 @@ callFirst(callSecond)
           <div class="js-result">
             <div class="js-show">
               <div class="js-title-result-block">
-                <div class="js-code-result-title">content</div>
+                <div class="js-code-result-title">Content</div>
                 <div class="js-code-result-run">run</div>
-                <div class="css-content">
-                  假如連 Second 也用函式的方式呈現呢？就會變成這個奇怪的樣子<br />
-                  而現在的程式這麼短已經很奇怪了，如果程式有很多不就非常恐怖，所以callback用太多會產生
-                  Callback Hell 就會變成下方圖片的樣子<br />為了解決這個大問題就衍伸了
-                  Promise ，那 Promise
-                  到底是甚麼呢？他又給我們帶來甚麼好處？我們下個章節再來討論吧
-                </div>
+                <p class="css-content">會回傳一個利用深拷貝而得到的新物件</p>
               </div>
             </div>
             <div class="js-console">
@@ -105,7 +81,6 @@ callFirst(callSecond)
             </div>
           </div>
         </div>
-        <img src="../../imgs/callback.png" alt="" style="margin-left: 25%" />
       </div>
     </div>
     <script src="../components/common.js"></script>

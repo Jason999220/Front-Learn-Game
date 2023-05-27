@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="../copy.html">BACK</a>
+      <h3>想想看再看答案唷</h3>
+    </nav>
+    <div class="container" style="height: auto">
+      <div class="js-learn" style="width: 100%">
+        <!-- 玩玩看 -->
+        <h4>第一題</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+let arr1 = [1, 2, [3, 4]];
+let arr2 = arr1.slice();
+arr2 [ 2 ] [ 0 ] = 5;
+console.log(arr1);
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  跟想像的結果一樣嗎？ 假如不一樣的話該怎麼修改呢？
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4>第二題</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+const numbers = [1, 2, 3];
+numbers.map((num) => {
+  num = num * 2;
+});
+console.log(numbers);
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  跟想像的結果一樣嗎？ 假如不一樣的話該怎麼修改呢？
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4>第三題</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+const person = { name: 'John', age: 30 };
+const newPerson = person;
+newPerson.age = 35;
+console.log(person.age);
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  跟想像的結果一樣嗎？ 假如不一樣的話該怎麼修改呢？
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4>第四題</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+const arr1 = [1, 2, [3, 4, { name: 'John' }]];
+const arr2 = JSON.parse(JSON.stringify(arr1));
+arr2[2][2].name = 'Lucy';
+console.log(arr1[2][2].name);
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  跟想像的結果一樣嗎？ 假如不一樣的話該怎麼修改呢？
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4>第五題</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+const people = [
+  { name:'Jason', age: 32 },
+  { name:'banana', age: 29 },
+]
+
+people.forEach(( item , index )=>{
+  if( item.name === 'banana' ){
+    item = { name: 'Lucy', age: 18 }
+  }
+})
+console.log(people)
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  跟想像的結果一樣嗎？ 假如不一樣的話該怎麼修改呢？
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4>第六題</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+let obj1 = {
+  name: 'John',
+  age: 30,
+  hobbies: ['reading', 'painting'],
+  address: {
+    street: '123 Main St',
+    city: 'New York'
+  }
+};
+
+let obj2 = Object.assign({}, obj1);
+obj2.hobbies.push('coding');
+obj2.address.city = 'San Francisco';
+
+console.log(obj1.hobbies);
+console.log(obj1.address.city);
+
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  跟想像的結果一樣嗎？ 假如不一樣的話該怎麼修改呢？
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../components/object.js"></script>
+  </body>
+</html>

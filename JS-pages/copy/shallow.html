@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="../copy.html">BACK</a>
+      <h3>
+        只有最外層的容器是傳值，若有多層的結構，仍然是傳址，那就要來討論看看什麼是傳值和傳址囉。
+      </h3>
+    </nav>
+    <div class="container" style="height: auto">
+      <div class="js-learn" style="width: 100%">
+        <!-- 傳值 -->
+        <h4>傳值</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+let x = 5;
+let y = 5;
+console.log(x === y);
+
+x=3
+console.log(x)
+console.log(y)
+console.log(x === y);
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  原始型別 => 屬於傳值 ( call by value )<br />
+                  那原始型別有哪些呢？可以回去複習看看這邊簡單帶過 string
+                  、number、boolean等<br /><br />
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 傳址 -->
+        <h4>傳址</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+let obj = { a : 10 , b : { x : 3}};
+let obj2 = { a : 10 , b : { x : 3}};
+console.log( obj === obj2 );
+console.log( obj.a === obj2.a );
+console.log( obj.b.x === obj2.b.x );
+
+obj.a = 0
+obj.b.x = '好'
+
+console.log( obj.a === obj2.a );
+console.log( obj.b.x === obj2.b.x );
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  物件型別 => 屬於傳址 ( call by reference )<br />
+                  就算資料都相同但最外層的記憶體位置是不同的<br />
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 陣列的淺拷貝 -->
+        <h4>陣列的淺拷貝</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+let arr = [ 1, 2, [ 3 , 4 ] ];
+let arr2 = arr;
+console.log(arr === arr2);
+
+// slice
+let arr3 = arr.slice(0);
+console.log(arr === arr3);
+console.log(arr3);
+
+// concat
+let arr4 = arr.concat([]);
+console.log(arr === arr4);
+
+// map
+let arr5 = arr.map( item => item );
+console.log(arr === arr5);
+
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  陣列的淺拷貝方法如下<br />
+                  1. array.slice() =>
+                  slice原本是用來分割陣列，分割0相當於淺拷貝<br />
+                  2. array.concat() =>
+                  concat原本是用來合併陣列，合併空陣列相當於淺拷貝<br />
+                  3. array.map() <br /><br />
+                  因為是淺拷貝只會影響到第一層的記憶體指向,下層的記憶體依然還是指向同一個位置<br />可以試著改動程式碼去匹配下層的資料
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+// filter
+let arr = [1, 2, 3, 4];
+let arr2 = arr.filter( item => {
+  return true
+});
+console.log(arr === arr2);
+
+// forEach + push
+let arr3 = []
+arr.forEach((item)=>{
+  arr3.push(item)
+})
+console.log(arr === arr3);
+
+// ...
+let arr4 = [...arr];
+console.log(arr === arr4);
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  以為結束了嗎，這邊還有三種方法等著你們學習<br />
+                  4.array.fliter() <br />
+                  5. forEach + push() <br />
+                  6. 【...】 <br /><br />
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 物件的淺拷貝 -->
+        <h4>物件的淺拷貝</h4>
+        <div class="js-box-2">
+          <div class="js-block">
+            <div class="js-title-block">
+              <div class="js-code-title">JS</div>
+              <textarea class="js-code">
+let obj = { a : 10 , b : { x : 3}};
+let obj2 = obj
+obj.b.x=4
+console.log( obj === obj2 );
+console.log( obj.a === obj2.a );
+console.log( obj.b.x === obj2.b.x );
+
+let num = { a : 1, b : { x : 2 } };
+let num2 = Object.assign({}, num);
+console.log(num2);
+console.log(num == num2);
+console.log(num.b == num2.b);
+console.log(num.b.x == num2.b.x);
+
+let str = { a : 1, b : { x : 2 } };
+let str2 = { ...obj };
+console.log(str2 === str);
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Content</div>
+                <div class="js-code-result-run">run</div>
+                <p class="css-content">
+                  物件的淺拷貝方法如下<br />
+                  1. 直接賦值 =>
+                  假如修改任何一邊的屬性時，會一起變動，這是因為物件透過傳址的方式，所以兩個物件會指向同一個記憶體位置，實際上並未產生新的物件。<br />
+                  2. Object.assign() <br />
+                  3. 【...】
+                </p>
+              </div>
+            </div>
+            <div class="js-console">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">console</p>
+                <iframe class="console-iframe"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../components/object.js"></script>
+  </body>
+</html>
