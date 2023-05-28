@@ -50,17 +50,30 @@ console.log(obj2.a == obj1.a)
         </div>
 
         <!-- lodash 中的 【_.cloneDeep】 -->
-        <h4>_.cloneDeep</h4>
+        <h4>使用 lodash 中的 【_.cloneDeep】</h4>
         <div class="js-box-2">
           <div class="js-block">
             <div class="js-title-block">
               <div class="js-code-title">JS</div>
               <textarea class="js-code">
-let obj1 = {a: {a: 1}}
-let obj2 = JSON.parse(JSON.stringify(obj1))
-obj1.a.a = 2
-console.log(obj2 == obj1)
-console.log(obj2.a == obj1.a)
+const _ = require('lodash');
+const originalObject = {
+  name: 'John',
+  age: 30,
+  address: {
+    city: 'New York',
+    country: 'USA'
+  }
+};
+
+const clonedObject = _.cloneDeep(originalObject);
+
+// 修改原始對象的属性
+originalObject.name = 'Alice';
+originalObject.address.city = 'Los Angeles';
+
+console.log(originalObject);
+console.log(clonedObject);
               </textarea>
             </div>
           </div>
@@ -70,13 +83,19 @@ console.log(obj2.a == obj1.a)
               <div class="js-title-result-block">
                 <div class="js-code-result-title">Content</div>
                 <div class="js-code-result-run">run</div>
-                <p class="css-content">會回傳一個利用深拷貝而得到的新物件</p>
+                <p class="css-content">
+                  由於此範例無法在此頁面上直接進行，下方直接公布答案，請有興趣的可以自行嘗試<br /><br />
+                  { name: 'Alice', age: 30, address: { city: 'Los Angeles',
+                  country: 'USA' } } <br /><br />
+                  { name: 'John', age: 30, address: { city: 'New York', country:
+                  'USA' } }
+                </p>
               </div>
             </div>
             <div class="js-console">
               <div class="js-title-result-block">
                 <p class="js-code-result-title">console</p>
-                <iframe class="console-iframe"></iframe>
+                <iframe class="console-iframe"> </iframe>
               </div>
             </div>
           </div>
