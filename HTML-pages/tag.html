@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--begin code mirror -->
+    <!-- 以下兩個是 CodeMirror 核心文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.js"></script>
+    <!-- 代碼高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/clike/clike.js"></script>
+    <!-- html 代码高亮 -->
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- xml 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/xml/xml.min.js"></script>
+    <!-- 主题樣式文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/theme/dracula.css"
+    />
+    <!-- 括號匹配支持 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/edit/matchbrackets.js"></script>
+    <!--end Code Mirror -->
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="../pages/html.html">BACK</a>
+      <div class="js-title"></div>
+    </nav>
+    <div
+      style="
+        background: linear-gradient(45deg, peru, lightblue);
+        padding-bottom: 1rem;
+      "
+    >
+      <figure style="margin: 0 15%">
+        <img src="../imgs/tag.png" alt="dog" />
+        <figcaption>
+          <a
+            href="https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics"
+            >圖片來源 :MDN</a
+          >
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="container-grid" style="height: calc(100vh - 45px - 296.4px)">
+      <a class="course-js" href="./basic.html">基本</a>
+      <a class="course-js" href="./semantic.html">語意化</a>
+      <a class="course-js" href="./embed.html">嵌入內容</a>
+      <a class="course-js" href="./table.html">表格</a>
+      <a class="course-js" href="./form.html">表單</a>
+    </div>
+    <script src="../components/html.js"></script>
+  </body>
+</html>

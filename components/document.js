@@ -1,16 +1,63 @@
-// 給需要HTML的區塊使用
-const jsResult = document.querySelectorAll(".js-result");
-// const jsResultText = document.querySelectorAll(".js-result-text");
+// 給 HTML & JS 使用
 const jsCodeRun = document.querySelectorAll(".js-code-result-run");
-// const handleOutput = document.querySelectorAll(".js-output");
 const htmlCode = document.querySelectorAll(".html-code");
 const jsCode = document.querySelectorAll(".js-code");
 const resultIframe = document.querySelectorAll(".css-result-iframe");
 
 // 第三版
 for (let i = 0; i < jsCodeRun.length; i++) {
+  // 觸發 codeMirror 高亮
+  const htmlCodeCodeMirror = CodeMirror.fromTextArea(htmlCode[i], {
+    lineNumbers: true, // 顯示行號
+    mode: "xml", // 語言模式
+    theme: "dracula", // 主题樣式
+    lineWrapping: true, // 是否自動換行，false => scroll
+    maxHeight: "25px", // 指定最大高度
+    foldGutter: true, // 處理折疊
+    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"], // 處理折疊
+    foldStyle: "brace", // 折疊方式
+    tabSize: 4, // 縮排，預設為4
+    smartIndent: true, // 自動調整縮進
+    autoCloseTags: true, // 自動補齊Tag
+    autoIndent: true,
+    indentUnit: 4,
+    extraKeys: {
+      "Ctrl-Space": "autocomplete", // 自動補齊
+    },
+  });
+  const jsCodeCodeMirror = CodeMirror.fromTextArea(jsCode[i], {
+    lineNumbers: true, // 顯示行號
+    mode: "javascript", // 語言模式
+    theme: "dracula", // 主题樣式
+    lineWrapping: true, // 是否自動換行，false => scroll
+    maxHeight: "25px", // 指定最大高度
+    maxWidth: "400px", // 指定最大高度
+    foldGutter: true, // 處理折疊
+    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"], // 處理折疊
+    foldStyle: "brace", // 折疊方式
+    tabSize: 4, // 縮排，預設為4
+    smartIndent: true, // 自動調整縮進
+    autoCloseTags: true, // 自動補齊Tag
+    autoIndent: true,
+    indentUnit: 4,
+    extraKeys: {
+      "Ctrl-Space": "autocomplete", // 自動補齊
+    },
+  });
+
   jsCodeRun[i].addEventListener("click", () => {
     resultIframe[i].contentDocument.body.innerHTML = ""; // reset
+
+    // 監聽编辑器内容變化事件
+    htmlCodeCodeMirror.on("change", function (cm) {
+      // 编辑器中的内容設置到 textarea 中
+      htmlCode[i].value = cm.getValue();
+    });
+    jsCodeCodeMirror.on("change", function (cm) {
+      // 编辑器中的内容設置到 textarea 中
+      jsCode[i].value = cm.getValue();
+    });
+
     resultIframe[i].contentDocument.body.innerHTML =
       htmlCode[i].value +
       `<style>*{margin:0;font-size:1.5rem;margin-bottom:.5rem}</style>`; // save HTML code

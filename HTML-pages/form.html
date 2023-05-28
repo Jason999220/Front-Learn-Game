@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--begin code mirror -->
+    <!-- 以下兩個是 CodeMirror 核心文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.js"></script>
+    <!-- 代碼高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/clike/clike.js"></script>
+    <!-- html 代码高亮 -->
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- xml 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/xml/xml.min.js"></script>
+    <!-- 主题樣式文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/theme/dracula.css"
+    />
+    <!-- 括號匹配支持 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/edit/matchbrackets.js"></script>
+    <!--end Code Mirror -->
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="./tag.html">BACK</a>
+      <div class="js-title"></div>
+    </nav>
+    <div class="container" style="height: auto">
+      <div class="js-learn" style="width: 100%">
+        <!-- form -->
+        <h4>form 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<form action=""></form>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- input -->
+        <h4>input 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<input type="text">
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- label -->
+        <h4>label 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<label for=""></label>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- button -->
+        <h4>button 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<button>click me</button>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- textarea -->
+        <h4>textarea 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+< textarea name="" id="" cols="30" rows="10">
+
+< /textarea>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- select -->
+        <h4>select 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<select name="" id="">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+</select>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- optgroup -->
+        <h4>optgroup 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<select name="" id="">
+  <optgroup label="fruit">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <optgroup label="food">
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+</select>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- fieldset -->
+        <h4>fieldset 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<fieldset>
+  <legend>個人資料</legend>
+  <label for="name">名字</label>
+  <input type="text" id="name" placeholder="Name ....">
+  <br>
+  <label for="email">Email</label>
+  <input type="Email" id="email" placeholder="Email ....">
+</fieldset>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../components/html.js"></script>
+  </body>
+</html>

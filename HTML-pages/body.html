@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--begin code mirror -->
+    <!-- 以下兩個是 CodeMirror 核心文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.js"></script>
+    <!-- 代碼高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/clike/clike.js"></script>
+    <!-- html 代码高亮 -->
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- xml 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/xml/xml.min.js"></script>
+    <!-- 主题樣式文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/theme/dracula.css"
+    />
+    <!-- 括號匹配支持 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/edit/matchbrackets.js"></script>
+    <!--end Code Mirror -->
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="../pages/html.html">BACK</a>
+      <div class="js-title"></div>
+    </nav>
+    <div class="container" style="height: auto">
+      <div class="js-learn" style="width: 100%">
+        <!-- h1 -->
+        <h4>h1</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<h1>HELLO</h1>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  有想過 pseudo element、pseudo element 混搭嗎？<br />
+                  沒想到吧 ~~ 竟然還可以混搭，但也不是每種形式都可以搭配<br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../components/html.js"></script>
+  </body>
+</html>

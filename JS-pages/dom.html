@@ -5,6 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--begin code mirror -->
+    <!-- 以下兩個是 CodeMirror 核心文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.js"></script>
+    <!-- 代碼高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/clike/clike.js"></script>
+    <!-- html 代码高亮 -->
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- CSS 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/css/css.min.js"></script>
+    <!-- JS 代码高亮 -->
+    <script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+    <!-- xml 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/xml/xml.min.js"></script>
+    <!-- Groovy 高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/groovy/groovy.js"></script>
+    <!-- 主题樣式文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/theme/dracula.css"
+    />
+    <!-- 代碼折叠支持 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/foldgutter.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/foldcode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/foldgutter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/brace-fold.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/fold/comment-fold.js"></script>
+    <!-- 括號匹配支持 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/edit/matchbrackets.js"></script>
+    <!--end Code Mirror -->
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
@@ -52,10 +88,14 @@
           <div class="js-title-block">
             <div class="js-code-title">JS</div>
             <textarea class="js-code">
-const box1 = document.getElementById('box1')
-const box = document.getElementsByClassName('box')
-const span = document.querySelector('span')
-const p = document.querySelectorAll('.myP')
+const box1 =
+  document.getElementById('box1')
+const box =
+  document.getElementsByClassName('box')
+const span =
+  document.querySelector('span')
+const p =
+  document.querySelectorAll('.myP')
 box1.addEventListener("click", (event) => {
     alert(event.target.innerText);
 });
@@ -118,8 +158,10 @@ p[0].addEventListener("click", (event) => {
           <div class="js-title-block">
             <div class="js-code-title">JS</div>
             <textarea class="js-code">
-const box1 = document.getElementById('box1')
-const box2 = document.getElementById('box2')
+const box1 =
+  document.getElementById('box1')
+const box2 =
+  document.getElementById('box2')
 
 // 第一種，綁定處理函式
 function sayHi (){
@@ -178,26 +220,30 @@ alert('Hey')
           <div class="js-title-block">
             <div class="js-code-title">JS</div>
             <textarea class="js-code">
-const box1 = document.getElementById('box1')
-const box2 = document.getElementById('box2')
-const input = document.getElementById('input')
+const box1 =
+  document.getElementById('box1')
+const box2 =
+  document.getElementById('box2')
+const input =
+  document.getElementById('input')
+
 box1.addEventListener('click', ()=>{
-alert('HELLO');
+  alert('HELLO');
 })
 box2.addEventListener('mouseover', ()=>{
-box2.innerText = "A";
+  box2.innerText = "A";
 })
 box2.addEventListener('mouseout', ()=>{
-box2.innerHTML = "B";
+  box2.innerHTML = "B";
 })
 input.addEventListener('focus', ()=>{
-input.style["background"] = "red";
+  input.style["background"] = "red";
 })
 input.addEventListener('blur', ()=>{
-input.style["background"] = "peru";
+  input.style["background"] = "peru";
 })
 input.addEventListener('keyup', (event)=>{
-box1.innerText =`按下的是 : ${event.key}` ;
+  box1.innerText =`按下的是 : ${event.key}` ;
 })
             </textarea>
           </div>
@@ -249,10 +295,14 @@ box1.innerText =`按下的是 : ${event.key}` ;
           <div class="js-title-block">
             <div class="js-code-title">JS</div>
             <textarea class="js-code">
-  const box1 = document.getElementById('box1')
-  const box2 = document.getElementById('box2')
-  const box3 = document.getElementById('box3')
-  const box4 = document.getElementById('box4')
+  const box1 =
+  document.getElementById('box1')
+  const box2 =
+  document.getElementById('box2')
+  const box3 =
+  document.getElementById('box3')
+  const box4 =
+  document.getElementById('box4')
 
   box1.addEventListener('click', ()=>{
     box1.style["font-size"] = "20px";
@@ -296,6 +346,6 @@ box1.innerText =`按下的是 : ${event.key}` ;
         </div>
       </div>
     </div>
-    <script src="./components/document.js"></script>
+    <script src="../components/document.js"></script>
   </body>
 </html>

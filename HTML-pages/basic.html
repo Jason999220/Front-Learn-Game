@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--begin code mirror -->
+    <!-- 以下兩個是 CodeMirror 核心文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.js"></script>
+    <!-- 代碼高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/clike/clike.js"></script>
+    <!-- html 代码高亮 -->
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- xml 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/xml/xml.min.js"></script>
+    <!-- 主题樣式文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/theme/dracula.css"
+    />
+    <!-- 括號匹配支持 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/edit/matchbrackets.js"></script>
+    <!--end Code Mirror -->
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="./tag.html">BACK</a>
+      <div class="js-title"></div>
+    </nav>
+    <div class="container" style="height: auto">
+      <div class="js-learn" style="width: 100%">
+        <!-- hx -->
+        <h4>h1 ~ h6 元素</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<h1>HELLO</h1>
+<h3>HELLO</h3>
+<h6>HELLO</h6>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  HTML 提供了6種不同大小的標題<br />
+                  由< h1>到< h6>，h1為字體最大，h6為字體最小<br />
+                  就像寫文章都會有大標題小標題，通常會習慣按照順序寫，假如今天沒有大標題突然就一堆小標題不是會怪怪的，就是那種感覺<br />
+                  還有一個不成文的規定，一個文章通常只會有一個大標題，所以只會寫一次h1<br />
+                  但就算寫了很多個h1程式也還是會執行的啦
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- div -->
+        <h4>div 元素</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<div style="background: red;">Hello</div>
+<div style="background: peru;">World</div>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  div 是屬於區塊元素<br />
+                  表示會佔據整個可用的寬度，這邊依照顏色可以得知整個寬度都被佔滿。<br />
+                  用於想將某個範圍內的元素組成一個區塊時會使用<br />
+                  此時的 【style="background: "】是屬於CSS部分稍後會提到。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- p -->
+        <h4>p 元素</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<p style="background: red;">Hello</p>
+<p style="background: peru;">World</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  p 是屬於區塊元素<br />跟 div 一樣會佔據整個可用的寬度。<br />
+                  用於表示一個段落
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- span -->
+        <h4>span 元素</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<span>Hello</span>
+<span>World</span>
+
+<p>這是一段文字
+  <span style="color: red;">這部分變紅色</span>
+  其餘不變。
+</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  span 屬於 【行內元素】，不會獨占一行<br />
+                  本身並不具有任何特定的意義，會用於需要有特殊內容或特殊樣式時
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- br -->
+        <h4>br 元素</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<span>Hello</span>
+<br>
+<span>World</span>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  咦？span 不是行內元素嗎，怎麼換行了？<br />
+                  這就是接下來要介紹的 br 標籤，它可以使想換行的地方換行<br />
+                  只能放一個嗎？當然是想放幾個都行ㄚ
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../components/html.js"></script>
+  </body>
+</html>

@@ -1,13 +1,8 @@
-// 給不用HTML的區塊使用
-const jsResult = document.querySelectorAll(".js-result");
-const jsResultText = document.querySelectorAll(".js-result-text");
+// 給 JS  使用 => 不包含物件、陣列
 const jsCodeRun = document.querySelectorAll(".js-code-result-run");
-const handleOutput = document.querySelectorAll(".js-output");
-const typeFinish = document.getElementById("context-span"); // js result context
 const jsCode = document.querySelectorAll(".js-code");
 const consoleIframe = document.querySelectorAll(".console-iframe");
 
-// 第三版
 for (let i = 0; i < jsCodeRun.length; i++) {
   jsCodeRun[i].addEventListener("click", () => {
     consoleIframe[i].contentDocument.body.innerHTML = ""; // reset

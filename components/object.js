@@ -1,19 +1,15 @@
-// 給不用HTML的區塊使用
-const jsResult = document.querySelectorAll(".js-result");
-const jsResultText = document.querySelectorAll(".js-result-text");
+// 給 JS  使用 => 包含物件、陣列
 const jsCodeRun = document.querySelectorAll(".js-code-result-run");
-const handleOutput = document.querySelectorAll(".js-output");
-const typeFinish = document.getElementById("context-span"); // js result context
 const jsCode = document.querySelectorAll(".js-code");
 const consoleIframe = document.querySelectorAll(".console-iframe");
 const opacityToggle = document.querySelectorAll(".opacity-toggle");
 
-// 第三版
 for (let i = 0; i < jsCodeRun.length; i++) {
   jsCodeRun[i].addEventListener("click", () => {
     // opacityToggle[i].style = "opacity: 1";
     consoleIframe[i].contentDocument.body.innerHTML = ""; // reset
     // resultIframe[i].contentWindow.eval(jsCode[i].value); //  save JS code
+
     try {
       // 使用 JSON.stringify 將全部資料已字串形式存取不然用上面那種方式陣列會消失，但麻煩是變數字串也會直接被印出來
       console.log = (msg, ...args) => {

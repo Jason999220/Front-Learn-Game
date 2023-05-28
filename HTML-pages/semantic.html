@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--begin code mirror -->
+    <!-- 以下兩個是 CodeMirror 核心文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/lib/codemirror.js"></script>
+    <!-- 代碼高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/mode/clike/clike.js"></script>
+    <!-- html 代码高亮 -->
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- xml 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/xml/xml.min.js"></script>
+    <!-- 主题樣式文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/theme/dracula.css"
+    />
+    <!-- 括號匹配支持 -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.31.0/addon/edit/matchbrackets.js"></script>
+    <!--end Code Mirror -->
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="back" href="./tag.html">BACK</a>
+      <h3>
+        HTML語意化的作用是使籤具有特定的語義，有助於網頁閱讀器和搜索引擎理解網頁的結構和內容。<br />
+        但並不意味著一定要使用，而是根據網頁內容和需求，亦或者都用div也可以。
+      </h3>
+    </nav>
+    <div class="container" style="height: auto">
+      <div class="js-learn" style="width: 100%">
+        <div
+          style="
+            width: 530px;
+            height: 263px;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+          "
+        >
+          <img src="../imgs/aside.gif" alt="" />
+          <span class="img-url" style="margin-left: 0">
+            <a
+              href="https://medium.com/@changru.studio/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3html%E8%AA%9E%E6%84%8F%E5%8C%96%E6%A8%99%E7%B1%A4-33dd8247d779"
+              target="_blank"
+              style="color: #000"
+              >圖片來源：Medium
+            </a>
+          </span>
+        </div>
+
+        <!-- header -->
+        <h4>header 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<header>header</header>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  定義網頁或區塊的頂部部分，通常包含標題、Logo、導覽菜單、搜索框等。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- main -->
+        <h4>main 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<main>main</main>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  網頁的主要內容<br />
+                  每個頁面只能有一個 < main> 標籤
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <h4>footer 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<footer>footer</footer>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  定義網頁或區塊的底部部分，通常包含版權信息、頁腳菜單等。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- nav -->
+        <h4>nav 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<nav>nav</nav>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  用於定義網站的導航區塊，包含網站的主要導覽鏈接。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- article -->
+        <h4>article 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<article>article</article>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  表示獨立的文章或內容區塊，如新聞文章、廣告等。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- section -->
+        <h4>section 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<section>section</section>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">自訂的區塊，例如一篇文章、一則留言等</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- aside -->
+        <h4>aside 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<aside>aside</aside>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  表示網頁的附加內容或側邊欄，通常包含與主要內容相關但獨立於主要內容的信息。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- figure -->
+        <h4>figure 標籤</h4>
+        <div class="js-box-2">
+          <div class="html-block">
+            <div class="js-title-block">
+              <div class="js-code-title">HTML</div>
+              <textarea class="html-code">
+<figure>
+  <img src="../imgs/dog.jpg" alt="dog" style="width:200px;height:300px">
+
+  <figcaption>
+    圖片來源 :
+    https://www.pexels.com/zh-tw/photo/3361722/
+  </figcaption>
+</figure>
+              </textarea>
+            </div>
+          </div>
+          <div class="resize"></div>
+          <div class="js-result">
+            <div class="js-show">
+              <div class="js-title-result-block">
+                <div class="js-code-result-title">Result</div>
+                <div class="js-code-result-run">run</div>
+                <iframe class="css-result-iframe"></iframe>
+              </div>
+            </div>
+            <div class="css-content-block">
+              <div class="js-title-result-block">
+                <p class="js-code-result-title">content</p>
+                <p class="css-content">
+                  < figcaption> 元素用於定義圖片的相關標題或描述 <br />
+                  < figure> 標籤用來包裹圖片和相關的標題
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../components/html.js"></script>
+  </body>
+</html>
