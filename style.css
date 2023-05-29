@@ -152,7 +152,7 @@ nav {
   border: 1px solid #000;
   display: flex;
   flex-direction: column;
-  background-color: lightsalmon;
+  background-color: #ffbd9d;
   overflow-y: scroll;
 }
 .right {

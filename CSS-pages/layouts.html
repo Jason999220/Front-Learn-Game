@@ -10,8 +10,15 @@
   <body>
     <nav class="nav-css">
       <a class="back" href="../index.html">BACK</a>
-      <h3>flex 為一維的排版系統</h3>
-      <h3>grid 為二維的網格系統</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr">
+        <h3>
+          必須在父容器使用【display:flex】<br />子容器才會有作用，grid也是嘿
+        </h3>
+        <div>
+          <h3>flex 為一維的排版系統</h3>
+          <h3>grid 為二維的網格系統</h3>
+        </div>
+      </div>
       <!-- 各大選項標題 -->
       <div class="title-box">
         <a class="title" href="./concept.html">介紹</a>
@@ -27,6 +34,16 @@
     <div class="container">
       <!-- 選項區 -->
       <aside class="css-aside">
+        <div style="padding-bottom: 2rem; margin: 0 auto">
+          <img src="../imgs/flex.png" />
+          <div class="img-url" style="margin-left: 4%">
+            <a
+              href="https://www.casper.tw/css/2017/07/21/css-flex/"
+              target="_blank"
+              >圖片來源：卡斯柏's Blog
+            </a>
+          </div>
+        </div>
         <!-- flex-direction -->
         <div class="course">
           <input type="radio" name="option" id="flex-direction" />
